@@ -8,14 +8,10 @@ website:
       - href: index.qmd
         text: Home
       - about.qmd
+  page-footer:
+    center: "© 2026 Eduardo Vitale · [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)"
 
 format:
   html:
-    theme:
-      - cosmo
-      - brand
-    css: styles.css
+    theme: [cosmo, sea.scss]   # or sun.scss
     toc: true
-
-
-

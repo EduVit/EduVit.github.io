@@ -1,0 +1,117 @@
+/* Sun theme: yellows, with navy details */
+
+/*-- scss:defaults --*/
+// colours
+$navy: #0d3b66;    // navbar, links, borders, tags, buttons
+$sun: #f2c14e;     // title banner, intro box
+$butter: #fbefc8;  // page background
+$ink: #08131f;     // text
+
+// usage of each colour
+$text: $ink;
+$link: $navy;
+$border: $navy;
+$banner-bg: $sun;
+$box-bg: $sun;
+$tag-bg: $navy;
+$tag-fg: $butter;
+$tag-border: $navy;
+$button-bg: $navy;
+$button-fg: $butter;
+$button-border: $navy;
+
+// page, text, link and navbar colours
+$body-bg: $butter;
+$body-color: $text;
+$headings-color: $text;
+$link-color: $link;
+$navbar-bg: $navy;
+$navbar-fg: $butter;
+
+/*-- scss:rules --*/
+
+/* links in listings */
+div.quarto-post a {color: $text;}
+
+/* paragraph and heading spacing */
+main p {margin-bottom: 0.8rem;}
+main h2 {margin-top: 1.6rem; margin-bottom: 0.6rem;}
+main .cell {margin-bottom: 0;}
+main .cell-output-display {margin: 0;}
+main figure.figure, main .quarto-float {margin-top: 0.6rem; margin-bottom: 0.6rem;}
+
+/* figure captions */
+figcaption, .figure-caption, .quarto-float-caption {
+  color: $link;
+  text-align: center;
+  margin-top: 0.3rem;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* title banner */
+.quarto-title-banner {
+  background-color: $banner-bg;
+  color: $text;
+  padding-top: 1.5rem;
+  padding-bottom: 1.2rem;
+  margin-bottom: 0.8rem;
+}
+.quarto-title-banner h1 {color: $text;}
+.quarto-title .description {margin-bottom: 0.5rem;}
+#title-block-header {margin-bottom: 0.5rem;}
+
+/* title uses the full width of the banner */
+.quarto-title-banner .quarto-title {grid-column: body-content-start / page-end-inset;}
+
+/* post author and date inside the title banner */
+#title-block-header:has(.quarto-title-meta-heading) {
+  background-color: $banner-bg;
+  padding-bottom: 1.2rem;
+  margin-bottom: 1rem;
+}
+#title-block-header:has(.quarto-title-meta-heading) .quarto-title-banner {
+  margin-bottom: 0;
+  padding-bottom: 0.6rem;
+}
+
+/* navbar: current page and hover colours */
+.navbar .navbar-nav .nav-link.active, .navbar .navbar-brand {color: $navbar-fg;}
+.navbar .navbar-nav .nav-link:hover, .navbar .navbar-brand:hover {color: #ffffff;}
+
+/* line between posts in listings */
+div.quarto-post {border-bottom: 1px solid $border; padding-bottom: 1rem;}
+
+/* bold listing titles, dates, table of contents title and post details */
+.listing-title a, .listing-date, #toc-title,
+#title-block-header.quarto-title-block.default .quarto-title-meta-heading {font-weight: bold;}
+
+/* category tags */
+.listing-categories {padding-top: 5px;}
+div.quarto-post .listing-categories .listing-category,
+.quarto-title .quarto-categories .quarto-category {color: $tag-fg; background-color: $tag-bg; border: 1px solid $tag-border; opacity: 1;}
+
+/* tags not clickable in listings */
+div.quarto-post .listing-categories .listing-category {pointer-events: none; cursor: default;}
+
+/* about page buttons */
+.about-link {color: $button-fg; background-color: $button-bg; border: 1px solid $button-border;}
+
+/* border around images and plots */
+main img {border: 1px solid $border; border-radius: 6px;}
+div:has(> .plotly.html-widget) {
+  border: 1px solid $border;
+  border-radius: 6px;
+  background-color: #ffffff;
+  padding: 12px;
+}
+
+/* intro box on the home page */
+.site-welcome {
+  background-color: $box-bg;
+  border: 2px solid $border;
+  border-radius: 6px;
+  padding: 0.9rem 1.2rem;
+  margin-bottom: 2rem;
+}
+.site-welcome p:last-child {margin-bottom: 0;}

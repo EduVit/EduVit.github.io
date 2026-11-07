@@ -1,12 +1,6 @@
-This licence applies to the source code in this repository (the Quarto configuration, the styling and the code chunks in `.qmd` files). All other content is licensed under CC BY-NC-SA 4.0, see [LICENSE.md](LICENSE.md).
-
----
-
-<!-- https://choosealicense.com/licenses/mit/ -->
-
 MIT License
 
-Copyright (c) 2026 [fullname]
+Copyright (c) 2026 Eduardo Vitale
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
