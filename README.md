@@ -1,2 +1,2 @@
 # EduVit.github.io
-Repo for my personal website
+Repository for my personal website
