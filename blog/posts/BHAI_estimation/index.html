@@ -1,0 +1,1768 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Eduardo Vitale">
+<meta name="dcterms.date" content="2026-10-09">
+<meta name="description" content="German hospital patients are less likely to catch an infection than the European average, yet Germany has more hospital infections per person. Why?">
+
+<title>Germany’s Hospital Paradox: Lower Risk per Stay, More Infections – Personal website</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-5ff40fc7b6085ff5dcd50c07b877a203.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<link href="../../../site_libs/htmltools-fill-0.5.9/fill.css" rel="stylesheet">
+
+<script src="../../../site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+
+<script src="../../../site_libs/plotly-binding-4.12.1/plotly.js"></script>
+
+<script src="../../../site_libs/typedarray-0.1/typedarray.min.js"></script>
+
+<script src="../../../site_libs/jquery-3.5.1/jquery.min.js"></script>
+
+<link href="../../../site_libs/crosstalk-1.2.2/css/crosstalk.min.css" rel="stylesheet">
+
+<script src="../../../site_libs/crosstalk-1.2.2/js/crosstalk.min.js"></script>
+
+<link href="../../../site_libs/plotly-htmlwidgets-css-2.25.2/plotly-htmlwidgets.css" rel="stylesheet">
+
+<script src="../../../site_libs/plotly-main-2.25.2/plotly-latest.min.js"></script>
+
+<meta name="robots" content="noindex, nofollow, noai, noimageai">
+
+
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">Personal website</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../cv/cv.html"> 
+<span class="menu-text">CV</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../blog/blog.html"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/EduVit" target="_blank"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Germany’s Hospital Paradox: Lower Risk per Stay, More Infections</h1>
+                  <div>
+        <div class="description">
+          German hospital patients are less likely to catch an infection than the European average, yet Germany has more hospital infections per person. Why?
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">Healthcare</div>
+                <div class="quarto-category">Public health</div>
+                <div class="quarto-category">Germany</div>
+                <div class="quarto-category">Europe</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Eduardo Vitale </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">October 9, 2026</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Contents</h2>
+   
+  <ul>
+  <li><a href="#where-the-numbers-come-from" id="toc-where-the-numbers-come-from" class="nav-link active" data-scroll-target="#where-the-numbers-come-from">Where the numbers come from</a></li>
+  <li><a href="#how-big-is-the-problem" id="toc-how-big-is-the-problem" class="nav-link" data-scroll-target="#how-big-is-the-problem">How big is the problem?</a></li>
+  <li><a href="#the-most-common-infection-is-not-the-most-deadly" id="toc-the-most-common-infection-is-not-the-most-deadly" class="nav-link" data-scroll-target="#the-most-common-infection-is-not-the-most-deadly">The most common infection is not the most deadly</a></li>
+  <li><a href="#comparing-germany-with-the-rest-of-europe" id="toc-comparing-germany-with-the-rest-of-europe" class="nav-link" data-scroll-target="#comparing-germany-with-the-rest-of-europe">Comparing Germany with the rest of Europe</a></li>
+  <li><a href="#solving-the-paradox" id="toc-solving-the-paradox" class="nav-link" data-scroll-target="#solving-the-paradox">Solving the paradox</a></li>
+  <li><a href="#should-you-worry" id="toc-should-you-worry" class="nav-link" data-scroll-target="#should-you-worry">Should you worry?</a></li>
+  <li><a href="#note" id="toc-note" class="nav-link" data-scroll-target="#note">Note</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
+<p>Scrubbing up before surgery is one of medicine’s oldest routines, and one of its most effective. The practice dates back to 1847, when Ignaz Semmelweis, a doctor at Vienna General Hospital, made the doctors on his maternity ward disinfect their hands, and deaths among new mothers fell within months; by the 1870s, surgeons were routinely disinfecting their hands and instruments before operating (<a href="https://www.hartmann.info/en/products/brands/sterillium/stories/the-evolution-of-surgical-hand-hygiene">Hartmann-Gruppe</a>). Today, before every operation, surgeons spend minutes washing their hands and forearms, because a single contaminated hand can carry bacteria straight into a patient’s body during the procedure.</p>
+<p><a href="thumbnail.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="thumbnail.jpg" class="img-fluid" alt="Two medical professionals scrubbing their hands before surgery."></a></p>
+<p>Nonetheless, hospitals remain a place where people catch infections. On any given day, about <strong>one in 18 patients</strong> in a European hospital has at least one infection acquired during their stay (<a href="https://www.ecdc.europa.eu/en/publications-data/point-prevalence-survey-healthcare-associated-infections-and-antimicrobial-use-0">ECDC, 2013</a>). These are called healthcare-associated infections (HAIs), infections that develop in hospital and are unrelated to the reason for admission. A procedure can go perfectly, and the patient can still develop a urinary tract infection from a catheter a few days later. <br> In Germany, an estimated 20 to 30% of HAIs could be prevented (Gastmeier et al., 2010), but prevention resources are limited, so knowing which infections cause the most harm matters as much as knowing how many there are.</p>
+<p>Germany is a particularly interesting case: per hospitalised patient, its infection rate is below the European average; across the whole population, however, Germany has more HAIs per person than the European average (<a href="https://doi.org/10.2807/1560-7917.ES.2019.24.46.1900135">Zacher et al., 2019</a>). So how can fewer infections per hospitalised patient end up as more infections overall?</p>
+<section id="where-the-numbers-come-from" class="level2">
+<h2 class="anchored" data-anchor-id="where-the-numbers-come-from">Where the numbers come from</h2>
+<p>The data comes from a large survey run by the European Centre for Disease Prevention and Control in 2011 and 2012 (ECDC, 2013). On a single day, staff in each participating hospital checked every patient and recorded who had an HAI. Germany contributed a representative sample of 46 hospitals and 9,626 patients; across the EU/EEA (the European Union plus Iceland, Liechtenstein and Norway), more than 1,100 hospitals and over 270,000 patients took part.</p>
+<p>However, a single day only shows how many patients are infected on that day, not how many infections happen over a year, or how many people die from them. To fill this gap, the researchers built <a href="https://cran.r-project.org/package=BHAI">BHAI</a>, a free tool for the <a href="https://www.r-project.org/">R programming language</a>. <br> It combines the survey with how long patients stay in hospital and how long infections usually last (both estimated from the survey itself), how many people go through hospital each year (from official statistics), and how likely each infection is to cause complications or death (based on scientific literature). Since none of these is known exactly, BHAI repeats the calculation 1,000 times and reports a best estimate together with a likely range of values.</p>
+<p>The study looks at five common infections: pneumonia, surgical site infections, bloodstream infections, urinary tract infections and <em>Clostridioides difficile</em> (<em>C. difficile</em>) infections, a severe gut infection often triggered by antibiotics. Together, these five make up about four in five of all HAIs. Their impact is measured in disability-adjusted life years (DALYs), or <strong>healthy years of life lost</strong>, which add up years lost to early death and years lived with illness. Earlier work had estimated this burden for Europe as a whole (Cassini et al., 2016); this study applies the same idea to Germany.</p>
+</section>
+<section id="how-big-is-the-problem" class="level2">
+<h2 class="anchored" data-anchor-id="how-big-is-the-problem">How big is the problem?</h2>
+<p>For a single patient, the risk is relatively small: in 2011, about 1 in 40 hospital stays in Germany led to one of these five infections, although the risk is higher for the sickest patients, such as those in intensive care (ECDC, 2013).</p>
+<p>Across the whole country, however, these small risks add up. In 2011, there were an estimated 477,737 cases of these five infections in Germany, causing 16,401 deaths and adding up to 250,190 healthy years of life lost (<a href="#tbl-germany" class="quarto-xref">Table&nbsp;1</a>), or 309.8 for every 100,000 people. To put that in perspective, the combined effect of four other infectious diseases (influenza, <em>Salmonella</em>, hepatitis B and measles) cost Germany 39.4 healthy years per 100,000 people. This means that hospital infections cost <strong>almost eight times as much</strong>. Most of these years, about 191,000, are lost to early deaths, whereas about 60,000 are years lived with the after-effects of an infection.</p>
+<div class="cell">
+<div id="tbl-germany" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<div aria-describedby="tbl-germany-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<div id="grojyyxruw" style="padding-left:0px;padding-right:0px;padding-top:0px;padding-bottom:0px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#grojyyxruw table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#grojyyxruw thead, #grojyyxruw tbody, #grojyyxruw tfoot, #grojyyxruw tr, #grojyyxruw td, #grojyyxruw th {
+  border-style: none;
+}
+
+#grojyyxruw p {
+  margin: 0;
+  padding: 0;
+}
+
+#grojyyxruw .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#grojyyxruw .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#grojyyxruw .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#grojyyxruw .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#grojyyxruw .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#grojyyxruw .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#grojyyxruw .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#grojyyxruw .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: bold;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#grojyyxruw .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: bold;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#grojyyxruw .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#grojyyxruw .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#grojyyxruw .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#grojyyxruw .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#grojyyxruw .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#grojyyxruw .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#grojyyxruw .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#grojyyxruw .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#grojyyxruw .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#grojyyxruw .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#grojyyxruw .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#grojyyxruw .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#grojyyxruw .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#grojyyxruw .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#grojyyxruw .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#grojyyxruw .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#grojyyxruw .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#grojyyxruw .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#grojyyxruw .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#grojyyxruw .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#grojyyxruw .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#grojyyxruw .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#grojyyxruw .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#grojyyxruw .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#grojyyxruw .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#grojyyxruw .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#grojyyxruw .gt_left {
+  text-align: left;
+}
+
+#grojyyxruw .gt_center {
+  text-align: center;
+}
+
+#grojyyxruw .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#grojyyxruw .gt_font_normal {
+  font-weight: normal;
+}
+
+#grojyyxruw .gt_font_bold {
+  font-weight: bold;
+}
+
+#grojyyxruw .gt_font_italic {
+  font-style: italic;
+}
+
+#grojyyxruw .gt_super {
+  font-size: 65%;
+}
+
+#grojyyxruw .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#grojyyxruw .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#grojyyxruw .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#grojyyxruw .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#grojyyxruw .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#grojyyxruw .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#grojyyxruw .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#grojyyxruw .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#grojyyxruw div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table cell table table-sm table-striped small" data-quarto-bootstrap="false">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="gt_col_headings header">
+<th id="Infection" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Infection</th>
+<th id="Cases" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col">Infections</th>
+<th id="Deaths" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col">Deaths caused</th>
+<th id="DALY" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col">Healthy years lost (DALYs)</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="Infection">Pneumonia</td>
+<td class="gt_row gt_center" headers="Cases">106,171<br>(83,077 - 134,555)</td>
+<td class="gt_row gt_center" headers="Deaths">3,999<br>(875 - 7,961)</td>
+<td class="gt_row gt_center" headers="DALY">69,900<br>(32,642 - 113,617)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Infection">Surgical site</td>
+<td class="gt_row gt_center" headers="Cases">93,650<br>(74,062 - 116,669)</td>
+<td class="gt_row gt_center" headers="Deaths">2,344<br>(1,851 - 2,891)</td>
+<td class="gt_row gt_center" headers="DALY">28,845<br>(22,902 - 35,772)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Infection">Bloodstream</td>
+<td class="gt_row gt_center" headers="Cases">26,767<br>(17,435 - 40,243)</td>
+<td class="gt_row gt_center" headers="Deaths">4,014<br>(2,088 - 6,756)</td>
+<td class="gt_row gt_center" headers="DALY">59,428<br>(30,829 - 100,661)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Infection">Urinary tract</td>
+<td class="gt_row gt_center" headers="Cases">213,525<br>(177,470 - 259,600)</td>
+<td class="gt_row gt_center" headers="Deaths">3,688<br>(1,474 - 7,571)</td>
+<td class="gt_row gt_center" headers="DALY">66,373<br>(28,197 - 127,111)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Infection">C. difficile</td>
+<td class="gt_row gt_center" headers="Cases">36,253<br>(24,824 - 50,927)</td>
+<td class="gt_row gt_center" headers="Deaths">1,968<br>(90 - 4,447)</td>
+<td class="gt_row gt_center" headers="DALY">20,977<br>(1,886 - 47,794)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Infection" style="font-weight: bold; white-space: nowrap">All</td>
+<td class="gt_row gt_center" headers="Cases" style="font-weight: bold; white-space: nowrap">477,737<br>(424,176 - 538,473)</td>
+<td class="gt_row gt_center" headers="Deaths" style="font-weight: bold; white-space: nowrap">16,401<br>(10,894 - 22,885)</td>
+<td class="gt_row gt_center" headers="DALY" style="font-weight: bold; white-space: nowrap">250,190<br>(180,199 - 341,327)</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-tbl" id="tbl-germany-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: There were about half a million cases of five hospital infections in Germany in 2011, causing about 16,000 deaths. <br> Numbers are best estimates; the ranges in brackets show how uncertain each one is.
+</figcaption>
+</figure>
+</div>
+</div>
+</section>
+<section id="the-most-common-infection-is-not-the-most-deadly" class="level2">
+<h2 class="anchored" data-anchor-id="the-most-common-infection-is-not-the-most-deadly">The most common infection is not the most deadly</h2>
+<p>How often an infection happens and how deadly it is are two different things (<a href="#fig-cases-deaths" class="quarto-xref">Figure&nbsp;1</a>). Urinary tract infections are by far the most common, making up almost half of all cases, but only a small share of them are fatal. Bloodstream infections are the opposite: they are the rarest of the five, but they kill about as many people as urinary tract infections. <em>C. difficile</em> follows a similar pattern, with fewer cases than surgical site infections but a comparable number of deaths. Hovering over the bars shows the exact figures for each infection. Together, pneumonia and bloodstream infections account for roughly half of all healthy years lost, but just over a quarter of all cases (<a href="#tbl-germany" class="quarto-xref">Table&nbsp;1</a>). These numbers highlight that counting infections alone could point prevention efforts in the wrong direction, because the rarest but deadliest infections would end up at the bottom of the list.</p>
+<div class="cell">
+<div id="fig-cases-deaths" class="cell-output-display quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-cases-deaths-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="plotly html-widget html-fill-item" id="htmlwidget-67b0ed51733e15c3787a" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-67b0ed51733e15c3787a">{"x":{"data":[{"x":["Pneumonia","Surgical site","Bloodstream","Urinary tract","C. difficile"],"y":[106.17075612205697,93.650221995007954,26.766906193674867,213.52544141489167,36.253443942267531],"marker":{"color":"#00759C","line":{"color":"rgba(31,119,180,1)"}},"text":["106,171"," 93,650"," 26,767","213,525"," 36,253"],"textposition":["none","none","none","none","none"],"hovertemplate":["%{x}: %{text} infections<extra><\/extra>","%{x}: %{text} infections<extra><\/extra>","%{x}: %{text} infections<extra><\/extra>","%{x}: %{text} infections<extra><\/extra>","%{x}: %{text} infections<extra><\/extra>"],"type":"bar","error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["Pneumonia","Surgical site","Bloodstream","Urinary tract","C. difficile"],"y":[3999.2447208783906,2343.5278513191488,4013.8081301931761,3687.5063361402863,1967.7422161943143],"marker":{"color":"#00759C","line":{"color":"rgba(255,127,14,1)"}},"text":["3,999","2,344","4,014","3,688","1,968"],"textposition":["none","none","none","none","none"],"hovertemplate":["%{x}: %{text} deaths<extra><\/extra>","%{x}: %{text} deaths<extra><\/extra>","%{x}: %{text} deaths<extra><\/extra>","%{x}: %{text} deaths<extra><\/extra>","%{x}: %{text} deaths<extra><\/extra>"],"type":"bar","error_y":{"color":"rgba(255,127,14,1)"},"error_x":{"color":"rgba(255,127,14,1)"},"xaxis":"x2","yaxis":"y2","frame":null}],"layout":{"xaxis":{"domain":[0,0.41999999999999998],"automargin":true,"type":"category","categoryorder":"array","categoryarray":["Pneumonia","Surgical site","Bloodstream","Urinary tract","C. difficile"],"anchor":"y"},"xaxis2":{"domain":[0.57999999999999996,1],"automargin":true,"type":"category","categoryorder":"array","categoryarray":["Pneumonia","Surgical site","Bloodstream","Urinary tract","C. difficile"],"anchor":"y2"},"yaxis2":{"domain":[0,1],"automargin":true,"title":"Deaths caused","anchor":"x2"},"yaxis":{"domain":[0,1],"automargin":true,"title":"Infections (thousands)","anchor":"x"},"annotations":[],"shapes":[],"images":[],"margin":{"b":40,"l":60,"t":25,"r":10},"hovermode":"closest","showlegend":false},"attrs":{"47201f227e5d":{"x":{},"y":{},"marker":{"color":"#00759C"},"text":{},"textposition":"none","hovertemplate":"%{x}: %{text} infections<extra><\/extra>","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar"},"47205ee873c6":{"x":{},"y":{},"marker":{"color":"#00759C"},"text":{},"textposition":"none","hovertemplate":"%{x}: %{text} deaths<extra><\/extra>","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar"}},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false,"displayModeBar":false},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"subplot":true,"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cases-deaths-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Urinary tract infections are the most common type of HAI in Germany; bloodstream infections are the rarest and cause about as many deaths (2011).
+</figcaption>
+</figure>
+</div>
+</div>
+</section>
+<section id="comparing-germany-with-the-rest-of-europe" class="level2">
+<h2 class="anchored" data-anchor-id="comparing-germany-with-the-rest-of-europe">Comparing Germany with the rest of Europe</h2>
+<p>The study runs the same analysis on the German hospitals and on the hospitals from all participating EU/EEA countries. Because Germany and the EU/EEA have very different population sizes, the results are expressed per 100,000 people, so that the two can be compared directly.</p>
+<p>On this basis, Germany has 27% more hospital infections than the EU/EEA average (<a href="#tbl-paradox" class="quarto-xref">Table&nbsp;2</a>). It also has 30% more deaths from them and 6% more healthy years lost, but these two differences fall within the range of uncertainty, so they may simply be due to chance.</p>
+<p>The gap is not spread evenly across infection types (<a href="#fig-europe" class="quarto-xref">Figure&nbsp;2</a>). Most of Germany’s excess comes from urinary tract and <em>C. difficile</em> infections, where its burden is above the European average. Pneumonia shows the opposite pattern, with a lower burden in Germany, while surgical site and bloodstream infections cost a similar number of healthy years in both. The thin black lines on each bar (error bars) show the likely range of each estimate, and they overlap for every infection, meaning that it is not possible to say for certain whether Germany is really different from the rest of Europe for any single infection.</p>
+<div class="cell">
+<div id="fig-europe" class="cell-output-display quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-europe-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="plotly html-widget html-fill-item" id="htmlwidget-c8ad9b8df4e16ac3e28d" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-c8ad9b8df4e16ac3e28d">{"x":{"data":[{"x":["Pneumonia","Surgical site","Bloodstream","Urinary tract","C. difficile"],"y":[4.9515542179137038,2.901574178848664,4.9695855002814389,4.5655839606355917,2.4363055902775033],"type":"bar","name":"Germany","marker":{"color":"#B43E1D","line":{"color":"rgba(31,119,180,1)"}},"legendgroup":"de","showlegend":true,"text":["5 (1.1–9.9)","2.9 (2.3–3.6)","5 (2.6–8.4)","4.6 (1.8–9.4)","2.4 (0.1–5.5)"],"textposition":["none","none","none","none","none"],"hovertemplate":["<b>%{x}<\/b><br>Deaths caused per 100,000: %{text}<extra><\/extra>","<b>%{x}<\/b><br>Deaths caused per 100,000: %{text}<extra><\/extra>","<b>%{x}<\/b><br>Deaths caused per 100,000: %{text}<extra><\/extra>","<b>%{x}<\/b><br>Deaths caused per 100,000: %{text}<extra><\/extra>","<b>%{x}<\/b><br>Deaths caused per 100,000: %{text}<extra><\/extra>"],"error_y":{"color":"black","array":[4.9052363401659962,0.67821070541669792,3.3956752414284432,4.808018771253086,3.0700382878563532],"arrayminus":[3.8682804036959557,0.61025184970640112,2.3844599804576885,2.7409493889586143,2.3251132858605517]},"error_x":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["Pneumonia","Surgical site","Bloodstream","Urinary tract","C. difficile"],"y":[5.5525773412438797,2.5548287931076259,3.2896128584795332,3.0577609607104765,0.89847336612469675],"type":"bar","name":"EU/EEA average","marker":{"color":"#E3AF45","line":{"color":"rgba(255,127,14,1)"}},"legendgroup":"eu","showlegend":true,"text":["5.6 (1.6–10.4)","2.6 (2.4–2.7)","3.3 (2.1–4.6)","3.1 (1.3–6.1)","0.9 (0–1.7)"],"textposition":["none","none","none","none","none"],"hovertemplate":["<b>%{x}<\/b><br>Deaths caused per 100,000: %{text}<extra><\/extra>","<b>%{x}<\/b><br>Deaths caused per 100,000: %{text}<extra><\/extra>","<b>%{x}<\/b><br>Deaths caused per 100,000: %{text}<extra><\/extra>","<b>%{x}<\/b><br>Deaths caused per 100,000: %{text}<extra><\/extra>","<b>%{x}<\/b><br>Deaths caused per 100,000: %{text}<extra><\/extra>"],"error_y":{"color":"black","array":[4.8225319328480643,0.12534779554832864,1.3405614195042275,3.0562833193024552,0.83423517014216964],"arrayminus":[3.9826705142474923,0.12827542979914153,1.1706801137447038,1.7749625194291609,0.85020207070059539]},"error_x":{"color":"rgba(255,127,14,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["Pneumonia","Surgical site","Bloodstream","Urinary tract","C. difficile"],"y":[86.544563054127636,35.713436773074029,73.579221203157729,82.177811180659475,25.972454453217416],"type":"bar","name":"Germany","marker":{"color":"#B43E1D","line":{"color":"rgba(44,160,44,1)"}},"legendgroup":"de","showlegend":false,"text":["86.5 (40.4–140.7)","35.7 (28.4–44.3)","73.6 (38.2–124.6)","82.2 (34.9–157.4)","26 (2.3–59.2)"],"textposition":["none","none","none","none","none"],"hovertemplate":["<b>%{x}<\/b><br>Healthy years lost per 100,000: %{text}<extra><\/extra>","<b>%{x}<\/b><br>Healthy years lost per 100,000: %{text}<extra><\/extra>","<b>%{x}<\/b><br>Healthy years lost per 100,000: %{text}<extra><\/extra>","<b>%{x}<\/b><br>Healthy years lost per 100,000: %{text}<extra><\/extra>","<b>%{x}<\/b><br>Healthy years lost per 100,000: %{text}<extra><\/extra>"],"error_y":{"color":"black","array":[54.127587718696944,8.5762971467425828,51.051139458139986,75.201740156774704,33.202681309876901],"arrayminus":[46.130089262329669,7.3582245163213003,35.408578732246802,47.265871714681936,23.637838393508954]},"error_x":{"color":"rgba(44,160,44,1)"},"xaxis":"x2","yaxis":"y2","frame":null},{"x":["Pneumonia","Surgical site","Bloodstream","Urinary tract","C. difficile"],"y":[112.13474102288468,35.020082267607329,75.838967184049437,56.980366444055903,10.127926570778722],"type":"bar","name":"EU/EEA average","marker":{"color":"#E3AF45","line":{"color":"rgba(214,39,40,1)"}},"legendgroup":"eu","showlegend":false,"text":["112.1 (60–174)","35 (33.2–36.7)","75.8 (51.2–104)","57 (24.9–104.4)","10.1 (1–19.1)"],"textposition":["none","none","none","none","none"],"hovertemplate":["<b>%{x}<\/b><br>Healthy years lost per 100,000: %{text}<extra><\/extra>","<b>%{x}<\/b><br>Healthy years lost per 100,000: %{text}<extra><\/extra>","<b>%{x}<\/b><br>Healthy years lost per 100,000: %{text}<extra><\/extra>","<b>%{x}<\/b><br>Healthy years lost per 100,000: %{text}<extra><\/extra>","<b>%{x}<\/b><br>Healthy years lost per 100,000: %{text}<extra><\/extra>"],"error_y":{"color":"black","array":[61.911892958256615,1.7059312358091958,28.183346626285839,47.43550942726057,8.9941723556277147],"arrayminus":[52.119882015936838,1.7701789402686003,24.684359040196227,32.054334942929337,9.1517131838128147]},"error_x":{"color":"rgba(214,39,40,1)"},"xaxis":"x2","yaxis":"y2","frame":null}],"layout":{"xaxis":{"domain":[0,0.41999999999999998],"automargin":true,"type":"category","categoryorder":"array","categoryarray":["Pneumonia","Surgical site","Bloodstream","Urinary tract","C. difficile"],"anchor":"y"},"xaxis2":{"domain":[0.57999999999999996,1],"automargin":true,"type":"category","categoryorder":"array","categoryarray":["Pneumonia","Surgical site","Bloodstream","Urinary tract","C. difficile"],"anchor":"y2"},"yaxis2":{"domain":[0,1],"automargin":true,"title":"Healthy years lost per 100,000","anchor":"x2"},"yaxis":{"domain":[0,1],"automargin":true,"title":"Deaths caused per 100,000","anchor":"x"},"annotations":[],"shapes":[],"images":[],"margin":{"b":40,"l":60,"t":25,"r":10},"hovermode":"closest","showlegend":true,"barmode":"group","legend":{"orientation":"h","x":0.5,"xanchor":"center","y":1.1200000000000001}},"attrs":{"47205b1b1d4":{"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"x":{},"y":{},"type":"bar","name":"Germany","marker":{"color":"#B43E1D"},"legendgroup":"de","showlegend":true,"text":["5 (1.1–9.9)","2.9 (2.3–3.6)","5 (2.6–8.4)","4.6 (1.8–9.4)","2.4 (0.1–5.5)"],"textposition":"none","hovertemplate":"<b>%{x}<\/b><br>Deaths caused per 100,000: %{text}<extra><\/extra>","error_y":{"array":[4.9052363401659962,0.67821070541669792,3.3956752414284432,4.808018771253086,3.0700382878563532],"arrayminus":[3.8682804036959557,0.61025184970640112,2.3844599804576885,2.7409493889586143,2.3251132858605517],"color":"black"},"inherit":true},"4720147860d0":{"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"x":{},"y":{},"type":"bar","name":"EU/EEA average","marker":{"color":"#E3AF45"},"legendgroup":"eu","showlegend":true,"text":["5.6 (1.6–10.4)","2.6 (2.4–2.7)","3.3 (2.1–4.6)","3.1 (1.3–6.1)","0.9 (0–1.7)"],"textposition":"none","hovertemplate":"<b>%{x}<\/b><br>Deaths caused per 100,000: %{text}<extra><\/extra>","error_y":{"array":[4.8225319328480643,0.12534779554832864,1.3405614195042275,3.0562833193024552,0.83423517014216964],"arrayminus":[3.9826705142474923,0.12827542979914153,1.1706801137447038,1.7749625194291609,0.85020207070059539],"color":"black"},"inherit":true},"4720750c2091":{"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"x":{},"y":{},"type":"bar","name":"Germany","marker":{"color":"#B43E1D"},"legendgroup":"de","showlegend":false,"text":["86.5 (40.4–140.7)","35.7 (28.4–44.3)","73.6 (38.2–124.6)","82.2 (34.9–157.4)","26 (2.3–59.2)"],"textposition":"none","hovertemplate":"<b>%{x}<\/b><br>Healthy years lost per 100,000: %{text}<extra><\/extra>","error_y":{"array":[54.127587718696944,8.5762971467425828,51.051139458139986,75.201740156774704,33.202681309876901],"arrayminus":[46.130089262329669,7.3582245163213003,35.408578732246802,47.265871714681936,23.637838393508954],"color":"black"},"inherit":true},"472025734da9":{"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"x":{},"y":{},"type":"bar","name":"EU/EEA average","marker":{"color":"#E3AF45"},"legendgroup":"eu","showlegend":false,"text":["112.1 (60–174)","35 (33.2–36.7)","75.8 (51.2–104)","57 (24.9–104.4)","10.1 (1–19.1)"],"textposition":"none","hovertemplate":"<b>%{x}<\/b><br>Healthy years lost per 100,000: %{text}<extra><\/extra>","error_y":{"array":[61.911892958256615,1.7059312358091958,28.183346626285839,47.43550942726057,8.9941723556277147],"arrayminus":[52.119882015936838,1.7701789402686003,24.684359040196227,32.054334942929337,9.1517131838128147],"color":"black"},"inherit":true}},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false,"displayModeBar":false},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"subplot":true,"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-europe-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Germany’s extra burden in 2011-2012 comes from urinary tract and <em>C. difficile</em> infections; pneumonia is below the EU/EEA average. <br> Error bars show the likely range, and overlap for every infection (per 100,000 people).
+</figcaption>
+</figure>
+</div>
+</div>
+</section>
+<section id="solving-the-paradox" class="level2">
+<h2 class="anchored" data-anchor-id="solving-the-paradox">Solving the paradox</h2>
+<p>How can each German patient be at lower risk, while Germany as a whole has more infections? The most likely answer is simple: Germans go into hospital more often. In 2011, there were about 246 hospital stays for every 1,000 people in Germany, compared with 165 in the EU/EEA (<a href="#tbl-paradox" class="quarto-xref">Table&nbsp;2</a>). Germany has more hospital beds per person than any other European country, and it has been argued that more beds lead to more people being admitted, including some who would not really need to be there. Each stay is slightly safer (2.4 HAIs per 100 stays, against 2.8 in the EU/EEA), but there are many more of them, and the infections add up.</p>
+<div class="cell">
+<div id="tbl-paradox" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<div aria-describedby="tbl-paradox-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<div id="hqnrtvdyin" style="padding-left:0px;padding-right:0px;padding-top:0px;padding-bottom:0px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#hqnrtvdyin table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#hqnrtvdyin thead, #hqnrtvdyin tbody, #hqnrtvdyin tfoot, #hqnrtvdyin tr, #hqnrtvdyin td, #hqnrtvdyin th {
+  border-style: none;
+}
+
+#hqnrtvdyin p {
+  margin: 0;
+  padding: 0;
+}
+
+#hqnrtvdyin .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#hqnrtvdyin .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#hqnrtvdyin .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#hqnrtvdyin .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#hqnrtvdyin .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#hqnrtvdyin .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#hqnrtvdyin .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#hqnrtvdyin .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: bold;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#hqnrtvdyin .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: bold;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#hqnrtvdyin .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#hqnrtvdyin .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#hqnrtvdyin .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#hqnrtvdyin .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#hqnrtvdyin .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#hqnrtvdyin .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#hqnrtvdyin .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#hqnrtvdyin .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#hqnrtvdyin .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#hqnrtvdyin .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#hqnrtvdyin .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#hqnrtvdyin .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#hqnrtvdyin .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#hqnrtvdyin .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#hqnrtvdyin .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#hqnrtvdyin .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#hqnrtvdyin .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#hqnrtvdyin .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#hqnrtvdyin .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#hqnrtvdyin .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#hqnrtvdyin .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#hqnrtvdyin .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#hqnrtvdyin .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#hqnrtvdyin .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#hqnrtvdyin .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#hqnrtvdyin .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#hqnrtvdyin .gt_left {
+  text-align: left;
+}
+
+#hqnrtvdyin .gt_center {
+  text-align: center;
+}
+
+#hqnrtvdyin .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#hqnrtvdyin .gt_font_normal {
+  font-weight: normal;
+}
+
+#hqnrtvdyin .gt_font_bold {
+  font-weight: bold;
+}
+
+#hqnrtvdyin .gt_font_italic {
+  font-style: italic;
+}
+
+#hqnrtvdyin .gt_super {
+  font-size: 65%;
+}
+
+#hqnrtvdyin .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#hqnrtvdyin .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#hqnrtvdyin .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#hqnrtvdyin .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#hqnrtvdyin .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#hqnrtvdyin .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#hqnrtvdyin .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#hqnrtvdyin .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#hqnrtvdyin div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table cell table table-sm table-striped small" data-quarto-bootstrap="false">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="gt_col_headings header">
+<th id="a::stub" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col"></th>
+<th id="germany" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col">Germany</th>
+<th id="eu" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col">EU/EEA average</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<th id="stub_1_1" class="gt_row gt_left gt_stub" data-quarto-table-cell-role="th" scope="row">Hospital stays per 1,000 people</th>
+<td class="gt_row gt_center" headers="stub_1_1 germany">246</td>
+<td class="gt_row gt_center" headers="stub_1_1 eu">165</td>
+</tr>
+<tr class="even">
+<th id="stub_1_2" class="gt_row gt_left gt_stub" data-quarto-table-cell-role="th" scope="row">HAIs per 100 hospital stays</th>
+<td class="gt_row gt_center" headers="stub_1_2 germany">2.40<br>(2.13 - 2.71)</td>
+<td class="gt_row gt_center" headers="stub_1_2 eu">2.83<br>(2.75 - 2.91)</td>
+</tr>
+<tr class="odd">
+<th id="stub_1_3" class="gt_row gt_left gt_stub" data-quarto-table-cell-role="th" scope="row">HAIs per 100,000 people</th>
+<td class="gt_row gt_center" headers="stub_1_3 germany">591<br>(525 - 667)</td>
+<td class="gt_row gt_center" headers="stub_1_3 eu">467<br>(455 - 481)</td>
+</tr>
+<tr class="even">
+<th id="stub_1_4" class="gt_row gt_left gt_stub" data-quarto-table-cell-role="th" scope="row">Deaths caused per 100,000 people</th>
+<td class="gt_row gt_center" headers="stub_1_4 germany">20.3<br>(13.5 - 28.3)</td>
+<td class="gt_row gt_center" headers="stub_1_4 eu">15.6<br>(10.3 - 21.0)</td>
+</tr>
+<tr class="odd">
+<th id="stub_1_5" class="gt_row gt_left gt_stub" data-quarto-table-cell-role="th" scope="row">Healthy years lost (DALYs) per 100,000 people</th>
+<td class="gt_row gt_center" headers="stub_1_5 germany">310<br>(223 - 423)</td>
+<td class="gt_row gt_center" headers="stub_1_5 eu">292<br>(220 - 370)</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-tbl" id="tbl-paradox-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2: Each hospital stay in Germany is less likely to lead to an infection, but Germans go into hospital more often, so Germany has more infections per person than the EU/EEA average (2011–2012). Numbers are best estimates; brackets shows the uncertainty.
+</figcaption>
+</figure>
+</div>
+</div>
+<p>This is the most likely explanation, but not a certain one, as the study did not test it directly. A second, larger group of German hospitals, not chosen to be representative, showed an even bigger gap with the rest of Europe. And as the data is from 2011 and 2012, things may have changed since then: a repeat survey in 2016 suggests that infections in German hospitals may have fallen slightly, although Germany was still estimated to have more per person than the EU/EEA average.</p>
+</section>
+<section id="should-you-worry" class="level2">
+<h2 class="anchored" data-anchor-id="should-you-worry">Should you worry?</h2>
+<p>Mostly, no: for anyone going into hospital, the risk from a single stay is small, at about 1 in 40 (2.4%). Not all of these infections are equally serious, either: urinary tract infections are the most frequent, but case for case, pneumonia and bloodstream infections cause far more damage.</p>
+<p>The bigger concern is for the country as a whole. Germany’s higher number of infections compared to the rest of Europe most likely comes from how many people go into hospital, not from hospitals being less safe: fewer infections per patient can still mean more infections overall. And these small risks add up: in 2011, these five infections cost Germany around 250,000 healthy years of life, almost eight times as much as influenza, <em>Salmonella</em>, hepatitis B and measles combined.</p>
+<p>Reducing this burden means two things: keep improving hygiene and infection control, and avoid hospital stays that are not really needed. Scrubbing up before surgery remains essential, but it’s only part of the answer.</p>
+</section>
+<section id="note" class="level2">
+<h2 class="anchored" data-anchor-id="note">Note</h2>
+<p>All figures and tables in this post come from running BHAI on the same data used in the paper; the hospital stay figures in <a href="#tbl-paradox" class="quarto-xref">Table&nbsp;2</a> come from the official statistics that BHAI itself uses. Because of this, the numbers in this post differ slightly from the published ones: BHAI is built on Monte Carlo simulations, which repeat the calculation 1,000 times, each time with slightly different random values that change from one run to the next. The differences are very small and do not change the conclusions of the paper.</p>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<p>Cassini A, Plachouras D, Eckmanns T, Abu Sin M, Blank HP, Ducomble T, et al.&nbsp;<strong>Burden of Six Healthcare-Associated Infections on European Population Health: Estimating Incidence-Based Disability-Adjusted Life Years through a Population Prevalence-Based Modelling Study.</strong> <em>PLoS Med. 2016;13(10):e1002150.</em> <a href="https://doi.org/10.1371/journal.pmed.1002150">doi:10.1371/journal.pmed.1002150</a> PMID: 27755545</p>
+<p>European Centre for Disease Prevention and Control (ECDC). <strong>Point prevalence survey of healthcare-associated infections and antimicrobial use in European acute care hospitals.</strong> <em>Stockholm: ECDC; 2013.</em> <a href="https://www.ecdc.europa.eu/en/publications-data/point-prevalence-survey-healthcare-associated-infections-and-antimicrobial-use-0" class="uri">https://www.ecdc.europa.eu/en/publications-data/point-prevalence-survey-healthcare-associated-infections-and-antimicrobial-use-0</a></p>
+<p>Gastmeier P, Brunkhorst F, Schrappe M, Kern W, Geffers C. <strong>How many nosocomial infections are avoidable?</strong> <em>Dtsch Med Wochenschr. 2010;135(3):91-3.</em> <a href="https://doi.org/10.1055/s-0029-1244823">doi:10.1055/s-0029-1244823</a> PMID: 20077383</p>
+<p>Hartmann-Gruppe. <strong>The evolution of surgical hand hygiene.</strong> Accessed 7 October 2026. <a href="https://www.hartmann.info/en/products/brands/sterillium/stories/the-evolution-of-surgical-hand-hygiene" class="uri">https://www.hartmann.info/en/products/brands/sterillium/stories/the-evolution-of-surgical-hand-hygiene</a></p>
+<p>Zacher B, Haller S, Willrich N, Walter J, Abu Sin M, Cassini A, Plachouras D, Suetens C, Behnke M, Gastmeier P, Wieler LH, Eckmanns T. <strong>Application of a new methodology and R package reveals a high burden of healthcare-associated infections (HAI) in Germany compared to the average in the European Union/European Economic Area, 2011 to 2012.</strong> <em>Euro Surveillance, 2019;24(46):pii=1900135.</em> <a href="https://doi.org/10.2807/1560-7917.ES.2019.24.46.1900135">doi:10.2807/1560-7917.ES.2019.24.46.1900135</a></p>
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>© 2026 Eduardo Vitale · <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+</body></html>

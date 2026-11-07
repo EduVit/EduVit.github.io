@@ -1,0 +1,128 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Eduardo Vitale",
+    "section": "",
+    "text": "I’m a student of the Master’s in Statistical Sciences at Università di Bologna (Italy 🇮🇹), currently on an exchange semester abroad at Monash University (Australia 🇦🇺).\nMy study topics include multidimensional data analysis, statistical modeling and neural networks. I have personal interest in all kinds of data that relate to geography, maps and transportation infrastructure (motorways, train networks, plane routes).\nIn the past, I’ve contributed substantially to the OpenStreetMap project with edits around my hometown of Bologna, and the broader Emilia-Romagna region.\nI’ve been a poll worker for 5 different instances of electoral consultations in Italy, both at ordinary polling stations and postal voting counting stations. I’ve covered most existing roles, from scrutineer to president.\nI’ve played basketball agonistically, chess and played the piano for 10 years. In my free time, I also like to ride my bike or do hikes."
+  },
+  {
+    "objectID": "blog/posts/BHAI_estimation/index.html",
+    "href": "blog/posts/BHAI_estimation/index.html",
+    "title": "Germany’s Hospital Paradox: Lower Risk per Stay, More Infections",
+    "section": "",
+    "text": "Scrubbing up before surgery is one of medicine’s oldest routines, and one of its most effective. The practice dates back to 1847, when Ignaz Semmelweis, a doctor at Vienna General Hospital, made the doctors on his maternity ward disinfect their hands, and deaths among new mothers fell within months; by the 1870s, surgeons were routinely disinfecting their hands and instruments before operating (Hartmann-Gruppe). Today, before every operation, surgeons spend minutes washing their hands and forearms, because a single contaminated hand can carry bacteria straight into a patient’s body during the procedure.\nNonetheless, hospitals remain a place where people catch infections. On any given day, about one in 18 patients in a European hospital has at least one infection acquired during their stay (ECDC, 2013). These are called healthcare-associated infections (HAIs), infections that develop in hospital and are unrelated to the reason for admission. A procedure can go perfectly, and the patient can still develop a urinary tract infection from a catheter a few days later.  In Germany, an estimated 20 to 30% of HAIs could be prevented (Gastmeier et al., 2010), but prevention resources are limited, so knowing which infections cause the most harm matters as much as knowing how many there are.\nGermany is a particularly interesting case: per hospitalised patient, its infection rate is below the European average; across the whole population, however, Germany has more HAIs per person than the European average (Zacher et al., 2019). So how can fewer infections per hospitalised patient end up as more infections overall?"
+  },
+  {
+    "objectID": "blog/posts/BHAI_estimation/index.html#where-the-numbers-come-from",
+    "href": "blog/posts/BHAI_estimation/index.html#where-the-numbers-come-from",
+    "title": "Germany’s Hospital Paradox: Lower Risk per Stay, More Infections",
+    "section": "Where the numbers come from",
+    "text": "Where the numbers come from\nThe data comes from a large survey run by the European Centre for Disease Prevention and Control in 2011 and 2012 (ECDC, 2013). On a single day, staff in each participating hospital checked every patient and recorded who had an HAI. Germany contributed a representative sample of 46 hospitals and 9,626 patients; across the EU/EEA (the European Union plus Iceland, Liechtenstein and Norway), more than 1,100 hospitals and over 270,000 patients took part.\nHowever, a single day only shows how many patients are infected on that day, not how many infections happen over a year, or how many people die from them. To fill this gap, the researchers built BHAI, a free tool for the R programming language.  It combines the survey with how long patients stay in hospital and how long infections usually last (both estimated from the survey itself), how many people go through hospital each year (from official statistics), and how likely each infection is to cause complications or death (based on scientific literature). Since none of these is known exactly, BHAI repeats the calculation 1,000 times and reports a best estimate together with a likely range of values.\nThe study looks at five common infections: pneumonia, surgical site infections, bloodstream infections, urinary tract infections and Clostridioides difficile (C. difficile) infections, a severe gut infection often triggered by antibiotics. Together, these five make up about four in five of all HAIs. Their impact is measured in disability-adjusted life years (DALYs), or healthy years of life lost, which add up years lost to early death and years lived with illness. Earlier work had estimated this burden for Europe as a whole (Cassini et al., 2016); this study applies the same idea to Germany."
+  },
+  {
+    "objectID": "blog/posts/BHAI_estimation/index.html#how-big-is-the-problem",
+    "href": "blog/posts/BHAI_estimation/index.html#how-big-is-the-problem",
+    "title": "Germany’s Hospital Paradox: Lower Risk per Stay, More Infections",
+    "section": "How big is the problem?",
+    "text": "How big is the problem?\nFor a single patient, the risk is relatively small: in 2011, about 1 in 40 hospital stays in Germany led to one of these five infections, although the risk is higher for the sickest patients, such as those in intensive care (ECDC, 2013).\nAcross the whole country, however, these small risks add up. In 2011, there were an estimated 477,737 cases of these five infections in Germany, causing 16,401 deaths and adding up to 250,190 healthy years of life lost (Table 1), or 309.8 for every 100,000 people. To put that in perspective, the combined effect of four other infectious diseases (influenza, Salmonella, hepatitis B and measles) cost Germany 39.4 healthy years per 100,000 people. This means that hospital infections cost almost eight times as much. Most of these years, about 191,000, are lost to early deaths, whereas about 60,000 are years lived with the after-effects of an infection.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nInfection\nInfections\nDeaths caused\nHealthy years lost (DALYs)\n\n\n\n\nPneumonia\n106,171(83,077 - 134,555)\n3,999(875 - 7,961)\n69,900(32,642 - 113,617)\n\n\nSurgical site\n93,650(74,062 - 116,669)\n2,344(1,851 - 2,891)\n28,845(22,902 - 35,772)\n\n\nBloodstream\n26,767(17,435 - 40,243)\n4,014(2,088 - 6,756)\n59,428(30,829 - 100,661)\n\n\nUrinary tract\n213,525(177,470 - 259,600)\n3,688(1,474 - 7,571)\n66,373(28,197 - 127,111)\n\n\nC. difficile\n36,253(24,824 - 50,927)\n1,968(90 - 4,447)\n20,977(1,886 - 47,794)\n\n\nAll\n477,737(424,176 - 538,473)\n16,401(10,894 - 22,885)\n250,190(180,199 - 341,327)\n\n\n\n\n\n\n\n\nTable 1: There were about half a million cases of five hospital infections in Germany in 2011, causing about 16,000 deaths.  Numbers are best estimates; the ranges in brackets show how uncertain each one is."
+  },
+  {
+    "objectID": "blog/posts/BHAI_estimation/index.html#the-most-common-infection-is-not-the-most-deadly",
+    "href": "blog/posts/BHAI_estimation/index.html#the-most-common-infection-is-not-the-most-deadly",
+    "title": "Germany’s Hospital Paradox: Lower Risk per Stay, More Infections",
+    "section": "The most common infection is not the most deadly",
+    "text": "The most common infection is not the most deadly\nHow often an infection happens and how deadly it is are two different things (Figure 1). Urinary tract infections are by far the most common, making up almost half of all cases, but only a small share of them are fatal. Bloodstream infections are the opposite: they are the rarest of the five, but they kill about as many people as urinary tract infections. C. difficile follows a similar pattern, with fewer cases than surgical site infections but a comparable number of deaths. Hovering over the bars shows the exact figures for each infection. Together, pneumonia and bloodstream infections account for roughly half of all healthy years lost, but just over a quarter of all cases (Table 1). These numbers highlight that counting infections alone could point prevention efforts in the wrong direction, because the rarest but deadliest infections would end up at the bottom of the list.\n\n\n\n\n\n\n\n\nFigure 1: Urinary tract infections are the most common type of HAI in Germany; bloodstream infections are the rarest and cause about as many deaths (2011)."
+  },
+  {
+    "objectID": "blog/posts/BHAI_estimation/index.html#comparing-germany-with-the-rest-of-europe",
+    "href": "blog/posts/BHAI_estimation/index.html#comparing-germany-with-the-rest-of-europe",
+    "title": "Germany’s Hospital Paradox: Lower Risk per Stay, More Infections",
+    "section": "Comparing Germany with the rest of Europe",
+    "text": "Comparing Germany with the rest of Europe\nThe study runs the same analysis on the German hospitals and on the hospitals from all participating EU/EEA countries. Because Germany and the EU/EEA have very different population sizes, the results are expressed per 100,000 people, so that the two can be compared directly.\nOn this basis, Germany has 27% more hospital infections than the EU/EEA average (Table 2). It also has 30% more deaths from them and 6% more healthy years lost, but these two differences fall within the range of uncertainty, so they may simply be due to chance.\nThe gap is not spread evenly across infection types (Figure 2). Most of Germany’s excess comes from urinary tract and C. difficile infections, where its burden is above the European average. Pneumonia shows the opposite pattern, with a lower burden in Germany, while surgical site and bloodstream infections cost a similar number of healthy years in both. The thin black lines on each bar (error bars) show the likely range of each estimate, and they overlap for every infection, meaning that it is not possible to say for certain whether Germany is really different from the rest of Europe for any single infection.\n\n\n\n\n\n\n\n\nFigure 2: Germany’s extra burden in 2011-2012 comes from urinary tract and C. difficile infections; pneumonia is below the EU/EEA average.  Error bars show the likely range, and overlap for every infection (per 100,000 people)."
+  },
+  {
+    "objectID": "blog/posts/BHAI_estimation/index.html#solving-the-paradox",
+    "href": "blog/posts/BHAI_estimation/index.html#solving-the-paradox",
+    "title": "Germany’s Hospital Paradox: Lower Risk per Stay, More Infections",
+    "section": "Solving the paradox",
+    "text": "Solving the paradox\nHow can each German patient be at lower risk, while Germany as a whole has more infections? The most likely answer is simple: Germans go into hospital more often. In 2011, there were about 246 hospital stays for every 1,000 people in Germany, compared with 165 in the EU/EEA (Table 2). Germany has more hospital beds per person than any other European country, and it has been argued that more beds lead to more people being admitted, including some who would not really need to be there. Each stay is slightly safer (2.4 HAIs per 100 stays, against 2.8 in the EU/EEA), but there are many more of them, and the infections add up.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGermany\nEU/EEA average\n\n\n\n\nHospital stays per 1,000 people\n246\n165\n\n\nHAIs per 100 hospital stays\n2.40(2.13 - 2.71)\n2.83(2.75 - 2.91)\n\n\nHAIs per 100,000 people\n591(525 - 667)\n467(455 - 481)\n\n\nDeaths caused per 100,000 people\n20.3(13.5 - 28.3)\n15.6(10.3 - 21.0)\n\n\nHealthy years lost (DALYs) per 100,000 people\n310(223 - 423)\n292(220 - 370)\n\n\n\n\n\n\n\n\nTable 2: Each hospital stay in Germany is less likely to lead to an infection, but Germans go into hospital more often, so Germany has more infections per person than the EU/EEA average (2011–2012). Numbers are best estimates; brackets shows the uncertainty.\n\n\n\n\nThis is the most likely explanation, but not a certain one, as the study did not test it directly. A second, larger group of German hospitals, not chosen to be representative, showed an even bigger gap with the rest of Europe. And as the data is from 2011 and 2012, things may have changed since then: a repeat survey in 2016 suggests that infections in German hospitals may have fallen slightly, although Germany was still estimated to have more per person than the EU/EEA average."
+  },
+  {
+    "objectID": "blog/posts/BHAI_estimation/index.html#should-you-worry",
+    "href": "blog/posts/BHAI_estimation/index.html#should-you-worry",
+    "title": "Germany’s Hospital Paradox: Lower Risk per Stay, More Infections",
+    "section": "Should you worry?",
+    "text": "Should you worry?\nMostly, no: for anyone going into hospital, the risk from a single stay is small, at about 1 in 40 (2.4%). Not all of these infections are equally serious, either: urinary tract infections are the most frequent, but case for case, pneumonia and bloodstream infections cause far more damage.\nThe bigger concern is for the country as a whole. Germany’s higher number of infections compared to the rest of Europe most likely comes from how many people go into hospital, not from hospitals being less safe: fewer infections per patient can still mean more infections overall. And these small risks add up: in 2011, these five infections cost Germany around 250,000 healthy years of life, almost eight times as much as influenza, Salmonella, hepatitis B and measles combined.\nReducing this burden means two things: keep improving hygiene and infection control, and avoid hospital stays that are not really needed. Scrubbing up before surgery remains essential, but it’s only part of the answer."
+  },
+  {
+    "objectID": "blog/posts/BHAI_estimation/index.html#note",
+    "href": "blog/posts/BHAI_estimation/index.html#note",
+    "title": "Germany’s Hospital Paradox: Lower Risk per Stay, More Infections",
+    "section": "Note",
+    "text": "Note\nAll figures and tables in this post come from running BHAI on the same data used in the paper; the hospital stay figures in Table 2 come from the official statistics that BHAI itself uses. Because of this, the numbers in this post differ slightly from the published ones: BHAI is built on Monte Carlo simulations, which repeat the calculation 1,000 times, each time with slightly different random values that change from one run to the next. The differences are very small and do not change the conclusions of the paper."
+  },
+  {
+    "objectID": "blog/posts/BHAI_estimation/index.html#references",
+    "href": "blog/posts/BHAI_estimation/index.html#references",
+    "title": "Germany’s Hospital Paradox: Lower Risk per Stay, More Infections",
+    "section": "References",
+    "text": "References\nCassini A, Plachouras D, Eckmanns T, Abu Sin M, Blank HP, Ducomble T, et al. Burden of Six Healthcare-Associated Infections on European Population Health: Estimating Incidence-Based Disability-Adjusted Life Years through a Population Prevalence-Based Modelling Study. PLoS Med. 2016;13(10):e1002150. doi:10.1371/journal.pmed.1002150 PMID: 27755545\nEuropean Centre for Disease Prevention and Control (ECDC). Point prevalence survey of healthcare-associated infections and antimicrobial use in European acute care hospitals. Stockholm: ECDC; 2013. https://www.ecdc.europa.eu/en/publications-data/point-prevalence-survey-healthcare-associated-infections-and-antimicrobial-use-0\nGastmeier P, Brunkhorst F, Schrappe M, Kern W, Geffers C. How many nosocomial infections are avoidable? Dtsch Med Wochenschr. 2010;135(3):91-3. doi:10.1055/s-0029-1244823 PMID: 20077383\nHartmann-Gruppe. The evolution of surgical hand hygiene. Accessed 7 October 2026. https://www.hartmann.info/en/products/brands/sterillium/stories/the-evolution-of-surgical-hand-hygiene\nZacher B, Haller S, Willrich N, Walter J, Abu Sin M, Cassini A, Plachouras D, Suetens C, Behnke M, Gastmeier P, Wieler LH, Eckmanns T. Application of a new methodology and R package reveals a high burden of healthcare-associated infections (HAI) in Germany compared to the average in the European Union/European Economic Area, 2011 to 2012. Euro Surveillance, 2019;24(46):pii=1900135. doi:10.2807/1560-7917.ES.2019.24.46.1900135"
+  },
+  {
+    "objectID": "blog/blog.html",
+    "href": "blog/blog.html",
+    "title": "All Roads Lead to R",
+    "section": "",
+    "text": "Welcome to All Roads Lead to R, a blog about interesting and unusual stories hidden in data.\nThe name is a reference to the old saying “all roads lead to Rome”: a small tribute to my Italian roots, and a playful way to bring them together with R, one of the most popular programming languages for data analysis.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGermany’s Hospital Paradox: Lower Risk per Stay, More Infections\n\n\n\nHealthcare\n\nPublic health\n\nGermany\n\nEurope\n\n\n\nGerman hospital patients are less likely to catch an infection than the European average, yet Germany has more hospital infections per person. Why?\n\n\n\n\n\nOct 9, 2026\n\n\nEduardo Vitale\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "cv/cv.html",
+    "href": "cv/cv.html",
+    "title": "Curriculum Vitae",
+    "section": "",
+    "text": "Monash University (Melbourne, Australia)\n\n\n\nCurriculum: Data Science  Alma Mater Studiorum - Università di Bologna (Bologna, Italy)  EQF level: 7 · National classification: LM-82 R\n\n\n\nCurriculum: Economics and Business  Alma Mater Studiorum - Università di Bologna (Bologna, Italy)  EQF level: 6 · National classification: L-41\n\n\n\nCurriculum: Advanced Scientific Track  Liceo Scientifico “Enrico Fermi” (Bologna, Italy)  EQF level: 4"
+  },
+  {
+    "objectID": "cv/cv.html#education-and-training",
+    "href": "cv/cv.html#education-and-training",
+    "title": "Curriculum Vitae",
+    "section": "",
+    "text": "Monash University (Melbourne, Australia)\n\n\n\nCurriculum: Data Science  Alma Mater Studiorum - Università di Bologna (Bologna, Italy)  EQF level: 7 · National classification: LM-82 R\n\n\n\nCurriculum: Economics and Business  Alma Mater Studiorum - Università di Bologna (Bologna, Italy)  EQF level: 6 · National classification: L-41\n\n\n\nCurriculum: Advanced Scientific Track  Liceo Scientifico “Enrico Fermi” (Bologna, Italy)  EQF level: 4"
+  },
+  {
+    "objectID": "cv/cv.html#certifications",
+    "href": "cv/cv.html#certifications",
+    "title": "Curriculum Vitae",
+    "section": "Certifications",
+    "text": "Certifications\n\nSAS Certified Specialist: Base Programming Using SAS 9.4 May 2026\nView badge\n\n\nIELTS Academic Mar 2025\nCEFR level C1. Overall band score 8.0\n\n\nCambridge English: First (FCE) Jun 2021\nCEFR level C1. Overall score 184/190"
+  },
+  {
+    "objectID": "cv/cv.html#language-skills",
+    "href": "cv/cv.html#language-skills",
+    "title": "Curriculum Vitae",
+    "section": "Language skills",
+    "text": "Language skills\n\nItalian\nNative\n\n\nEnglish\nC1"
+  },
+  {
+    "objectID": "cv/cv.html#digital-and-computer-skills",
+    "href": "cv/cv.html#digital-and-computer-skills",
+    "title": "Curriculum Vitae",
+    "section": "Digital and computer skills",
+    "text": "Digital and computer skills\n\nGeneral knowledge\nWindows · Android · Microsoft Office (Word, Excel, PowerPoint, Outlook, Teams) · Google Workspace (Docs, Sheets, Slides, Drive, Forms, Colab)\n\n\nProgramming languages\nR, Rmd (R Markdown) and Qmd (Quarto Markdown) · Python for statistical analysis (pandas, NumPy, SciPy, Matplotlib, seaborn, scikit-learn, PyTorch, TensorFlow, Keras) and Jupyter Notebooks · Basic knowledge and understanding of HTML, CSS, Javascript\n\n\nOther software and tools\nSAS · Tableau · Gretl · Quarto websites · Version control using Git (basic knowledge) · Stata (basic knowledge) · SPSS (basic knowledge) · LaTeX (basic knowledge) · Qualtrics (basic knowledge)"
+  },
+  {
+    "objectID": "cv/cv.html#social-and-political-activities",
+    "href": "cv/cv.html#social-and-political-activities",
+    "title": "Curriculum Vitae",
+    "section": "Social and political activities",
+    "text": "Social and political activities\n\nPoll worker 2022-2026\nComune di Bologna (Italy)  21-23/3/2026 (Referendum): President - Ordinary polling station  7-9/6/2025 (Referendum): Scrutineer acting as Vice President - Ordinary polling station  16-18/11/2024 (Regional Elections): Scrutineer acting as Vice President - Ordinary polling station  8-10/06/2024 (European Elections): Scrutineer - Ordinary polling station  25-26/09/2022 (National Elections): Scrutineer - Postal voting counting station"
+  },
+  {
+    "objectID": "cv/cv.html#other-experiences",
+    "href": "cv/cv.html#other-experiences",
+    "title": "Curriculum Vitae",
+    "section": "Other experiences",
+    "text": "Other experiences\n\nCourse “The profession of the economic analyst” 25-29 Jan 2021\nBanca d’Italia, Bologna office (Italy)  Analysis of regional and national economic data and creation of a brief results report, presented to the managers of the Bologna office; learning about the tasks and departments of Central Banks and the organisation of the European system.\n\n\nSummer School ‘Bio engineering: a week between genetics and electronics in a biomedical laboratory’ 15-19 Jun 2020\nOpificio Golinelli (Bologna, Italy)  During the summer school week, students build a fundamental tool for genetic analysis: the thermocycler. The device is assembled and programmed using Arduino, the well-known open source hardware/software platform that allows electronic prototypes to be made. Participants use it to perform a genetic test on some of their own DNA sequences. The results will then be compared with those obtained by similar commercial tools."
+  }
+]
