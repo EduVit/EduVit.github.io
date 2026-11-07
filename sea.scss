@@ -1,12 +1,11 @@
-/* Sea theme: blues, with yellow tags and buttons */
+/* Sea theme: blues */
 
 /*-- scss:defaults --*/
 // colours
-$navy: #0d3b66;    // navbar, links, borders
+$navy: #0d3b66;    // navbar, links, borders, buttons
 $sky: #b3cfe7;     // title banner, intro box
 $foam: #d6e6f2;    // page background
-$ink: #08131f;     // text
-$sun: #f2c14e;     // tags and buttons
+$ink: #08131f;     // text and tags
 
 // usage of each colour
 $text: $ink;
@@ -14,12 +13,12 @@ $link: $navy;
 $border: $navy;
 $banner-bg: $sky;
 $box-bg: $sky;
-$tag-bg: $sun;
+$tag-bg: transparent;
 $tag-fg: $ink;
-$tag-border: $sun;
-$button-bg: $sun;
-$button-fg: $ink;
-$button-border: $sun;
+$tag-border: $ink;
+$button-bg: transparent;
+$button-fg: $navy;
+$button-border: $navy;
 
 // page, text, link and navbar colours
 $body-bg: $foam;

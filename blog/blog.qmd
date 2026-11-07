@@ -1,5 +1,5 @@
 ---
-title: "ETC5523 Blog Assessment"
+title: "All Roads Lead to R"
 listing:
   contents: posts
   sort: "date desc"

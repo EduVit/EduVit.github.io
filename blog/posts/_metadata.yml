@@ -1,12 +1,11 @@
-# options specified here will apply to all posts in this folder
+# options for all posts in this folder
 
-# freeze computational output
-# (see https://quarto.org/docs/projects/code-execution.html#freeze)
-freeze: true
-
-# Enable banner style title blocks
+# title banner at the top of each post
 title-block-banner: true
 
-# Enable table of contents in blog posts
+# table of contents in each post
 toc: true
 toc-title: "Contents"
+
+# licence note at the end of each post
+license: "CC BY-NC-SA"

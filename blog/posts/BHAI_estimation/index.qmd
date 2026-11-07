@@ -23,7 +23,6 @@ hai_names <- c(HAP="Pneumonia", SSI="Surgical site", BSI="Bloodstream", UTI="Uri
 
 ```{r}
 #| label: setup
-#| cache: true
 data(german_pps_2011_repr)
 germany <- PPS(num_hai_patients=num_hai_patients, num_hai_patients_by_stratum=num_hai_patients_by_stratum,
     num_hai_patients_by_stratum_prior=num_hai_patients_by_stratum_prior, num_survey_patients=num_survey_patients,

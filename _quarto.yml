@@ -31,3 +31,6 @@ format:
     include-in-header:
       text: |
         <meta name="robots" content="noindex, nofollow, noai, noimageai">
+
+execute:
+  freeze: auto
