@@ -1,7 +1,27 @@
 ---
-title: "Personal website"
+title: "Eduardo Vitale"
+image: images/profile_photo.jpeg
+about:
+    template: trestles
+    links:
+        - icon: github
+          text: Github
+          href: https://github.com/EduVit
+          target: _blank
+        - icon: envelope
+          text: Contact me!
+          href: mailto:eduardo.vitale@studio.unibo.it
+        - icon: envelope
+          text: Contact me!
+          href: mailto:evit0003@student.monash.edu
 ---
 
-This is a Quarto website.
+I'm a student of the Master's in Statistical Sciences at Università di Bologna (Italy 🇮🇹), currently on an exchange semester abroad at Monash University (Australia 🇦🇺).
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+My study topics include multidimensional data analysis, statistical modeling and neural networks. I have personal interest in all kinds of data that relate to geography, maps and transportation infrastructure (motorways, train networks, plane routes).
+
+In the past, I've contributed substantially to the [OpenStreetMap project](https://osm.org) with edits around my hometown of Bologna, and the broader Emilia-Romagna region.
+
+I've been a poll worker for 5 different instances of electoral consultations in Italy, both at ordinary polling stations and postal voting counting stations. I've covered most existing roles, from scrutineer to president.
+
+I've played basketball agonistically, chess and played the piano for 10 years. In my free time, I also like to ride my bike or do hikes.

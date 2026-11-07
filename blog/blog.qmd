@@ -1,0 +1,18 @@
+---
+title: "ETC5523 Blog Assessment"
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  categories: true
+  sort-ui: false
+  filter-ui: false
+page-layout: full
+title-block-banner: false
+---
+
+:::{.site-welcome}
+Welcome to **All Roads Lead to R**, a blog about interesting and unusual stories hidden in data.
+
+The name is a reference to the old saying "all roads lead to Rome": a small tribute to my Italian roots, and a playful way to bring them together with [R](https://www.r-project.org/), one of the most popular programming languages for data analysis. 
+:::

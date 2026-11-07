@@ -5,13 +5,29 @@ website:
   title: "Personal website"
   navbar:
     left:
-      - href: index.qmd
-        text: Home
-      - about.qmd
+      - href: cv/cv.qmd
+        text: CV
+      - href: blog/blog.qmd
+        text: Blog
+    right:
+      - icon: github
+        href: https://github.com/EduVit
+        target: _blank
   page-footer:
     center: "© 2026 Eduardo Vitale · [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)"
 
 format:
   html:
-    theme: [cosmo, sea.scss]   # or sun.scss
+    theme: [cosmo, sea.scss]
+    from: markdown+emoji
     toc: true
+    lightbox: true
+    link-external-newwindow: true
+    tbl-cap-location: bottom
+    grid:
+      sidebar-width: 50px
+      body-width: 900px
+      margin-width: 250px
+    include-in-header:
+      text: |
+        <meta name="robots" content="noindex, nofollow, noai, noimageai">

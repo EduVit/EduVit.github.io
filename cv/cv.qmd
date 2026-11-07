@@ -1,0 +1,91 @@
+---
+title: "Curriculum Vitae"
+css: cv.css
+toc: true
+toc-depth: 2
+---
+
+## Education and training
+
+### Overseas Exchange Semester Jul-Dec 2026
+
+Monash University (Melbourne, Australia)
+
+### Master's Degree in Statistical Sciences Sep 2025-Current
+
+**Curriculum: Data Science** <br>
+Alma Mater Studiorum - Università di Bologna (Bologna, Italy) <br>
+*EQF level: 7* · *National classification: LM-82 R*
+
+### Bachelor's Degree in Statistical Sciences Sep 2022-Jul 2025
+
+**Curriculum: Economics and Business** <br>
+Alma Mater Studiorum - Università di Bologna (Bologna, Italy) <br>
+*EQF level: 6* · *National classification: L-41*
+
+### Upper Secondary Education Diploma - Scientific Lyceum Sep 2017-Jul 2022
+
+**Curriculum: Advanced Scientific Track** <br>
+Liceo Scientifico “Enrico Fermi” (Bologna, Italy) <br>
+*EQF level: 4*
+
+## Certifications
+
+### SAS Certified Specialist: Base Programming Using SAS 9.4 May 2026
+
+[View badge](https://www.credly.com/badges/1765853e-7fba-4a34-a681-5e344c31578a/public_url)
+
+### IELTS Academic Mar 2025
+
+CEFR level C1. Overall band score 8.0
+
+### Cambridge English: First (FCE) Jun 2021
+
+CEFR level C1. Overall score 184/190
+
+## Language skills
+
+### Italian 
+
+Native
+
+### English 
+
+C1
+
+## Digital and computer skills
+
+### General knowledge
+
+Windows · Android · Microsoft Office (Word, Excel, PowerPoint, Outlook, Teams) · Google Workspace (Docs, Sheets, Slides, Drive, Forms, Colab)
+
+### Programming languages
+
+R, Rmd (R Markdown) and Qmd (Quarto Markdown) · Python for statistical analysis (pandas, NumPy, SciPy, Matplotlib, seaborn, scikit-learn, PyTorch, TensorFlow, Keras) and Jupyter Notebooks · Basic knowledge and understanding of HTML, CSS, Javascript
+
+### Other software and tools
+
+SAS · Tableau · Gretl · Quarto websites · Version control using Git (basic knowledge) · Stata (basic knowledge) · SPSS (basic knowledge) · LaTeX (basic knowledge) · Qualtrics (basic knowledge)
+
+## Social and political activities
+
+### Poll worker 2022-2026
+
+Comune di Bologna (Italy) <br>
+21-23/3/2026 (Referendum): President - Ordinary polling station <br>
+7-9/6/2025 (Referendum): Scrutineer acting as Vice President - Ordinary polling station <br>
+16-18/11/2024 (Regional Elections): Scrutineer acting as Vice President - Ordinary polling station <br>
+8-10/06/2024 (European Elections): Scrutineer - Ordinary polling station <br>
+25-26/09/2022 (National Elections): Scrutineer - Postal voting counting station
+
+## Other experiences
+
+### Course "The profession of the economic analyst" 25-29 Jan 2021
+
+Banca d'Italia, Bologna office (Italy) <br>
+Analysis of regional and national economic data and creation of a brief results report, presented to the managers of the Bologna office; learning about the tasks and departments of Central Banks and the organisation of the European system.
+
+### Summer School 'Bio engineering: a week between genetics and electronics in a biomedical laboratory' 15-19 Jun 2020
+
+Opificio Golinelli (Bologna, Italy) <br>
+During the summer school week, students build a fundamental tool for genetic analysis: the thermocycler. The device is assembled and programmed using Arduino, the well-known open source hardware/software platform that allows electronic prototypes to be made. Participants use it to perform a genetic test on some of their own DNA sequences. The results will then be compared with those obtained by similar commercial tools.
