@@ -7,10 +7,16 @@ image: app-my-area.png
 title-block-banner: true
 toc: true
 toc-title: "Contents"
+language:
+    other-links-title: "Links"
+other-links:
+    - text: Source code
+      href: https://github.com/ETC5523-2026/etc5523-assignment-4-eduvit
+      icon: github
+    - text: Documentation
+      href: https://etc5523-2026.github.io/etc5523-assignment-4-eduvit/
+      icon: book
 ---
-
-[{{< fa brands github >}} Source code](https://github.com/ETC5523-2026/etc5523-assignment-4-eduvit){.btn .btn-sm .about-link}
-[{{< fa book >}} Documentation](https://etc5523-2026.github.io/etc5523-assignment-4-eduvit/){.btn .btn-sm .about-link}
 
 `roadcrashVIC` is an R package and Shiny app for exploring road crashes in Victoria, Australia, from 2012 to 2025: how they have changed over time, where and when they happen, and who is involved.
 

@@ -42,9 +42,13 @@ $space-l: 2rem;
 main p, main ul, main ol, main table, main pre, main .cell,
 main .quarto-float, main figure, main .cv-entry {margin-top: 0; margin-bottom: $space-m;}
 
+/* large: above and below a figure or table with its caption */
+main .quarto-figure, main .quarto-float, main .cell:has(figure, .quarto-float) {margin-top: $space-l; margin-bottom: $space-l;}
+
 /* inside a code cell or a figure the outer block sets the gap */
 main .cell .cell-output-display, main .cell .quarto-float, main .cell figure {margin: 0;}
 main .quarto-float table, main figure table {margin-bottom: 0;}
+main .quarto-figure figure, main figure p, main figure .figure-img {margin: 0;}
 
 /* small: between a figure or table and its caption */
 figcaption, .figure-caption, .quarto-float-caption {margin-top: $space-s; margin-bottom: 0; padding-bottom: 0;}
@@ -159,10 +163,10 @@ div.quarto-post .listing-categories .listing-category {pointer-events: none; cur
 
 /* ---------- Projects ---------- */
 
-/* project rows: screenshot on the left, text on the right */
+/* project rows: thumbnail on the left, text on the right */
 .project-entry {
   display: grid;
-  grid-template-columns: 2fr 3fr;
+  grid-template-columns: 300px 1fr;
   column-gap: $space-l;
   align-items: center;
   padding-bottom: $space-l;
@@ -173,7 +177,10 @@ div.quarto-post .listing-categories .listing-category {pointer-events: none; cur
 .project-text h2 a {color: $text; text-decoration: none; font-weight: bold;}
 .project-image p {margin: 0;}
 
-/* small screens: screenshot above the text */
+/* thumbnail: fixed 3:2 shape, the image fills it */
+.project-image img {width: 100%; aspect-ratio: 3 / 2; object-fit: cover;}
+
+/* small screens: thumbnail above the text */
 @media (max-width: 576px) {
   .project-entry {grid-template-columns: 1fr; row-gap: $space-m;}
 }
@@ -212,6 +219,6 @@ div.quarto-post .listing-categories .listing-category {pointer-events: none; cur
   .cv-entry-date {text-align: left;}
 }
 
-/* "Download CV": heading and links the same size as the contents, heading in bold */
-.sidebar .quarto-alternate-formats > h2 {font-size: $toc-font-size; font-weight: bold;}
-.sidebar .quarto-alternate-formats a {font-size: $toc-font-size;}
+/* "Download CV" and project "Links": same size as the contents, heading in bold */
+.sidebar .quarto-alternate-formats > h2, .sidebar .quarto-other-links > h2 {font-size: $toc-font-size; font-weight: bold;}
+.sidebar .quarto-alternate-formats a, .sidebar .quarto-other-links a {font-size: $toc-font-size;}

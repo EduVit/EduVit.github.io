@@ -5,7 +5,7 @@ title-block-banner: false
 
 :::: {.project-entry}
 ::: {.project-image}
-[![](roadcrashVIC/app-my-area.png){fig-alt="The Victoria tab of the roadcrashVIC app"}](roadcrashVIC/index.qmd)
+[![](roadcrashVIC/thumbnail.png){fig-alt="Map of road crashes in central Melbourne from the roadcrashVIC app"}](roadcrashVIC/index.qmd)
 :::
 ::: {.project-text}
 ## [roadcrashVIC](roadcrashVIC/index.qmd)
