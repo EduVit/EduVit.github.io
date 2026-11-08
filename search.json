@@ -7,6 +7,118 @@
     "text": "I’m a student of the Master’s in Statistical Sciences at Università di Bologna (Italy 🇮🇹), currently on an exchange semester abroad at Monash University (Australia 🇦🇺).\nMy study topics include multidimensional data analysis, statistical modeling and neural networks. I have personal interest in all kinds of data that relate to geography, maps and transportation infrastructure (motorways, train networks, plane routes).\nIn the past, I’ve contributed substantially to the OpenStreetMap project with edits around my hometown of Bologna, and the broader Emilia-Romagna region.\nI’ve been a poll worker for 5 different instances of electoral consultations in Italy, both at ordinary polling stations and postal voting counting stations. I’ve covered most existing roles, from scrutineer to president.\nI’ve played basketball agonistically, chess and played the piano for 10 years. In my free time, I also like to ride my bike or do hikes."
   },
   {
+    "objectID": "blog/blog.html",
+    "href": "blog/blog.html",
+    "title": "All Roads Lead to R",
+    "section": "",
+    "text": "Welcome to All Roads Lead to R, a blog about interesting and unusual stories hidden in data.\nThe name is a reference to the old saying “all roads lead to Rome”: a small tribute to my Italian roots, and a playful way to bring them together with R, one of the most popular programming languages for data analysis.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGermany’s Hospital Paradox: Lower Risk per Stay, More Infections\n\n\n\nHealthcare\n\nPublic health\n\nGermany\n\nEurope\n\n\n\n\nGerman hospital patients are less likely to catch an infection than the European average, yet Germany has more hospital infections per person. Why?\n\n\n\n\n\n\nOct 9, 2026\n\n\nEduardo Vitale\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "projects/roadcrashVIC/index.html",
+    "href": "projects/roadcrashVIC/index.html",
+    "title": "roadcrashVIC",
+    "section": "",
+    "text": "Source code  Documentation\nroadcrashVIC is an R package and Shiny app for exploring road crashes in Victoria, Australia, from 2012 to 2025: how they have changed over time, where and when they happen, and who is involved."
+  },
+  {
+    "objectID": "projects/roadcrashVIC/index.html#who-it-is-for",
+    "href": "projects/roadcrashVIC/index.html#who-it-is-for",
+    "title": "roadcrashVIC",
+    "section": "Who it is for",
+    "text": "Who it is for\nThe app is designed for members of the public who want to understand road safety across the state or in their local area. It helps answer one question: how have road crashes in Victoria changed since 2012, where do most crashes happen, when are they most frequent, and which road users are most vulnerable?"
+  },
+  {
+    "objectID": "projects/roadcrashVIC/index.html#what-the-package-includes",
+    "href": "projects/roadcrashVIC/index.html#what-the-package-includes",
+    "title": "roadcrashVIC",
+    "section": "What the package includes",
+    "text": "What the package includes\n\nCleaned data on every Victorian road crash that injured or killed at least one person, from 2012 to 2025, with local government area (LGA) boundaries and resident population;\nFunctions to filter crashes by date, summarise them by any variable and calculate rates per 100,000 residents;\nA Shiny app with two tabs: Victoria, for state-wide trends, times, road users and a map of LGAs; and My area, for crashes in one or more LGAs, including the location of each crash."
+  },
+  {
+    "objectID": "projects/roadcrashVIC/index.html#preview",
+    "href": "projects/roadcrashVIC/index.html#preview",
+    "title": "roadcrashVIC",
+    "section": "Preview",
+    "text": "Preview\n\n\n\nThe Victoria tab: sidebar controls, value boxes and the trend chart\n\n\n\n\n\nThe My area tab: crash locations and the roads with the most crashes in the selected LGAs"
+  },
+  {
+    "objectID": "projects/roadcrashVIC/index.html#try-it",
+    "href": "projects/roadcrashVIC/index.html#try-it",
+    "title": "roadcrashVIC",
+    "section": "Try it",
+    "text": "Try it\nThe package requires R 4.1.0 or later. Install it from GitHub and launch the app with:\n# install.packages(\"remotes\")\nremotes::install_github(\"ETC5523-2026/etc5523-assignment-4-eduvit\")\n\nlibrary(roadcrashVIC)\nrun_app()"
+  },
+  {
+    "objectID": "projects/roadcrashVIC/index.html#data-sources",
+    "href": "projects/roadcrashVIC/index.html#data-sources",
+    "title": "roadcrashVIC",
+    "section": "Data sources",
+    "text": "Data sources\n\nCrashes: Victorian road crash data, Department of Transport and Planning\nLGA boundaries: Vicmap Admin, Department of Transport and Planning\nPopulation: Regional population, Australian Bureau of Statistics\n\nAll sources are licensed under CC BY 4.0."
+  },
+  {
+    "objectID": "projects/projects.html",
+    "href": "projects/projects.html",
+    "title": "Projects",
+    "section": "",
+    "text": "An R package and Shiny app for exploring road crashes in Victoria, Australia, from 2012 to 2025.\n Source code  Documentation"
+  },
+  {
+    "objectID": "projects/projects.html#roadcrashvic",
+    "href": "projects/projects.html#roadcrashvic",
+    "title": "Projects",
+    "section": "",
+    "text": "An R package and Shiny app for exploring road crashes in Victoria, Australia, from 2012 to 2025.\n Source code  Documentation"
+  },
+  {
+    "objectID": "cv/index.html",
+    "href": "cv/index.html",
+    "title": "Curriculum Vitae",
+    "section": "",
+    "text": "Master’s Degree in Statistical Sciences\nCurriculum: Data Science\nAlma Mater Studiorum - Università di Bologna (Bologna, Italy)\nEQF level: 7 · National classification: LM-82 R\n\n\nSep 2025 - Current\n\n\n\n\nOverseas Exchange Semester\nMonash University (Melbourne, Australia)\n\n\nJul - Dec 2026\n\n\n\n\nBachelor’s Degree in Statistical Sciences\nCurriculum: Economics and Business\nAlma Mater Studiorum - Università di Bologna (Bologna, Italy)\nThesis: A study of health conditions and lifestyle habits in Italy using correspondence analysis (in Italian)\nEQF level: 6 · National classification: L-41\n\n\nSep 2022 - Jul 2025\n\n\n\n\nUpper Secondary Education Diploma - Scientific Lyceum\nCurriculum: Advanced Scientific Track\nLiceo Scientifico “Enrico Fermi” (Bologna, Italy)\nEQF level: 4\n\n\nSep 2017 - Jul 2022"
+  },
+  {
+    "objectID": "cv/index.html#education",
+    "href": "cv/index.html#education",
+    "title": "Curriculum Vitae",
+    "section": "",
+    "text": "Master’s Degree in Statistical Sciences\nCurriculum: Data Science\nAlma Mater Studiorum - Università di Bologna (Bologna, Italy)\nEQF level: 7 · National classification: LM-82 R\n\n\nSep 2025 - Current\n\n\n\n\nOverseas Exchange Semester\nMonash University (Melbourne, Australia)\n\n\nJul - Dec 2026\n\n\n\n\nBachelor’s Degree in Statistical Sciences\nCurriculum: Economics and Business\nAlma Mater Studiorum - Università di Bologna (Bologna, Italy)\nThesis: A study of health conditions and lifestyle habits in Italy using correspondence analysis (in Italian)\nEQF level: 6 · National classification: L-41\n\n\nSep 2022 - Jul 2025\n\n\n\n\nUpper Secondary Education Diploma - Scientific Lyceum\nCurriculum: Advanced Scientific Track\nLiceo Scientifico “Enrico Fermi” (Bologna, Italy)\nEQF level: 4\n\n\nSep 2017 - Jul 2022"
+  },
+  {
+    "objectID": "cv/index.html#certifications",
+    "href": "cv/index.html#certifications",
+    "title": "Curriculum Vitae",
+    "section": " Certifications",
+    "text": "Certifications\n\n\nSAS Certified Specialist: Base Programming Using SAS 9.4\nView badge\n\n\nMay 2026\n\n\n\n\nIELTS Academic\nCEFR level C1. Overall band score 8.0\n\n\nMar 2025\n\n\n\n\nCambridge English: First (FCE)\nCEFR level C1. Overall score 184/190\n\n\nJun 2021"
+  },
+  {
+    "objectID": "cv/index.html#languages",
+    "href": "cv/index.html#languages",
+    "title": "Curriculum Vitae",
+    "section": " Language skills",
+    "text": "Language skills\n\n\nItalian\n\n\nNative\n\n\n\n\nEnglish\n\n\nC1"
+  },
+  {
+    "objectID": "cv/index.html#digital-skills",
+    "href": "cv/index.html#digital-skills",
+    "title": "Curriculum Vitae",
+    "section": " Digital and computer skills",
+    "text": "Digital and computer skills\nGeneral knowledge\nWindows · Android · Microsoft Office (Word, Excel, PowerPoint, Outlook, Teams) · Google Workspace (Docs, Sheets, Slides, Drive, Forms, Colab)\nProgramming languages\nR, Rmd (R Markdown) and Qmd (Quarto Markdown) · Python for statistical analysis (pandas, NumPy, SciPy, Matplotlib, seaborn, scikit-learn, PyTorch, TensorFlow, Keras) and Jupyter Notebooks · Basic knowledge and understanding of HTML, CSS, Javascript\nOther software and tools\nSAS · Tableau · Gretl · Quarto websites · Version control using Git (basic knowledge) · Stata (basic knowledge) · SPSS (basic knowledge) · LaTeX (basic knowledge) · Qualtrics (basic knowledge)"
+  },
+  {
+    "objectID": "cv/index.html#social-activities",
+    "href": "cv/index.html#social-activities",
+    "title": "Curriculum Vitae",
+    "section": " Social and political activities",
+    "text": "Social and political activities\n\n\nPoll worker\nComune di Bologna (Italy)\n\n21-23/3/2026 (Referendum): President - Ordinary polling station\n7-9/6/2025 (Referendum): Scrutineer acting as Vice President - Ordinary polling station\n16-18/11/2024 (Regional Elections): Scrutineer acting as Vice President - Ordinary polling station\n8-10/06/2024 (European Elections): Scrutineer - Ordinary polling station\n25-26/09/2022 (National Elections): Scrutineer - Postal voting counting station\n\n\n\n2022 - 2026"
+  },
+  {
+    "objectID": "cv/index.html#other-experiences",
+    "href": "cv/index.html#other-experiences",
+    "title": "Curriculum Vitae",
+    "section": " Other experiences",
+    "text": "Other experiences\n\n\nCourse “The profession of the economic analyst”\nBanca d’Italia, Bologna office (Italy)\nAnalysis of regional and national economic data and creation of a brief results report, presented to the managers of the Bologna office; learning about the tasks and departments of Central Banks and the organisation of the European system.\n\n\n25-29 Jan 2021\n\n\n\n\nSummer School ‘Bio engineering: a week between genetics and electronics in a biomedical laboratory’\nOpificio Golinelli (Bologna, Italy)\nDuring the summer school week, students build a fundamental tool for genetic analysis: the thermocycler. The device is assembled and programmed using Arduino, the well-known open source hardware/software platform that allows electronic prototypes to be made. Participants use it to perform a genetic test on some of their own DNA sequences. The results will then be compared with those obtained by similar commercial tools.\n\n\n15-19 Jun 2020"
+  },
+  {
     "objectID": "blog/posts/BHAI_estimation/index.html",
     "href": "blog/posts/BHAI_estimation/index.html",
     "title": "Germany’s Hospital Paradox: Lower Risk per Stay, More Infections",
@@ -68,61 +180,5 @@
     "title": "Germany’s Hospital Paradox: Lower Risk per Stay, More Infections",
     "section": "References",
     "text": "References\nCassini A, Plachouras D, Eckmanns T, Abu Sin M, Blank HP, Ducomble T, et al. Burden of Six Healthcare-Associated Infections on European Population Health: Estimating Incidence-Based Disability-Adjusted Life Years through a Population Prevalence-Based Modelling Study. PLoS Med. 2016;13(10):e1002150. doi:10.1371/journal.pmed.1002150 PMID: 27755545\nEuropean Centre for Disease Prevention and Control (ECDC). Point prevalence survey of healthcare-associated infections and antimicrobial use in European acute care hospitals. Stockholm: ECDC; 2013. https://www.ecdc.europa.eu/en/publications-data/point-prevalence-survey-healthcare-associated-infections-and-antimicrobial-use-0\nGastmeier P, Brunkhorst F, Schrappe M, Kern W, Geffers C. How many nosocomial infections are avoidable? Dtsch Med Wochenschr. 2010;135(3):91-3. doi:10.1055/s-0029-1244823 PMID: 20077383\nHartmann-Gruppe. The evolution of surgical hand hygiene. Accessed 7 October 2026. https://www.hartmann.info/en/products/brands/sterillium/stories/the-evolution-of-surgical-hand-hygiene\nZacher B, Haller S, Willrich N, Walter J, Abu Sin M, Cassini A, Plachouras D, Suetens C, Behnke M, Gastmeier P, Wieler LH, Eckmanns T. Application of a new methodology and R package reveals a high burden of healthcare-associated infections (HAI) in Germany compared to the average in the European Union/European Economic Area, 2011 to 2012. Euro Surveillance, 2019;24(46):pii=1900135. doi:10.2807/1560-7917.ES.2019.24.46.1900135"
-  },
-  {
-    "objectID": "blog/blog.html",
-    "href": "blog/blog.html",
-    "title": "All Roads Lead to R",
-    "section": "",
-    "text": "Welcome to All Roads Lead to R, a blog about interesting and unusual stories hidden in data.\nThe name is a reference to the old saying “all roads lead to Rome”: a small tribute to my Italian roots, and a playful way to bring them together with R, one of the most popular programming languages for data analysis.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGermany’s Hospital Paradox: Lower Risk per Stay, More Infections\n\n\n\nHealthcare\n\nPublic health\n\nGermany\n\nEurope\n\n\n\nGerman hospital patients are less likely to catch an infection than the European average, yet Germany has more hospital infections per person. Why?\n\n\n\n\n\nOct 9, 2026\n\n\nEduardo Vitale\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "cv/index.html",
-    "href": "cv/index.html",
-    "title": "Curriculum Vitae",
-    "section": "",
-    "text": "Master’s Degree in Statistical Sciences\nCurriculum: Data Science\nAlma Mater Studiorum - Università di Bologna (Bologna, Italy)\nEQF level: 7 · National classification: LM-82 R\n\n\nSep 2025 - Current\n\n\n\n\nOverseas Exchange Semester\nMonash University (Melbourne, Australia)\n\n\nJul - Dec 2026\n\n\n\n\nBachelor’s Degree in Statistical Sciences\nCurriculum: Economics and Business\nAlma Mater Studiorum - Università di Bologna (Bologna, Italy)\nThesis: A study of health conditions and lifestyle habits in Italy using correspondence analysis (in Italian)\nEQF level: 6 · National classification: L-41\n\n\nSep 2022 - Jul 2025\n\n\n\n\nUpper Secondary Education Diploma - Scientific Lyceum\nCurriculum: Advanced Scientific Track\nLiceo Scientifico “Enrico Fermi” (Bologna, Italy)\nEQF level: 4\n\n\nSep 2017 - Jul 2022"
-  },
-  {
-    "objectID": "cv/index.html#education",
-    "href": "cv/index.html#education",
-    "title": "Curriculum Vitae",
-    "section": "",
-    "text": "Master’s Degree in Statistical Sciences\nCurriculum: Data Science\nAlma Mater Studiorum - Università di Bologna (Bologna, Italy)\nEQF level: 7 · National classification: LM-82 R\n\n\nSep 2025 - Current\n\n\n\n\nOverseas Exchange Semester\nMonash University (Melbourne, Australia)\n\n\nJul - Dec 2026\n\n\n\n\nBachelor’s Degree in Statistical Sciences\nCurriculum: Economics and Business\nAlma Mater Studiorum - Università di Bologna (Bologna, Italy)\nThesis: A study of health conditions and lifestyle habits in Italy using correspondence analysis (in Italian)\nEQF level: 6 · National classification: L-41\n\n\nSep 2022 - Jul 2025\n\n\n\n\nUpper Secondary Education Diploma - Scientific Lyceum\nCurriculum: Advanced Scientific Track\nLiceo Scientifico “Enrico Fermi” (Bologna, Italy)\nEQF level: 4\n\n\nSep 2017 - Jul 2022"
-  },
-  {
-    "objectID": "cv/index.html#certifications",
-    "href": "cv/index.html#certifications",
-    "title": "Curriculum Vitae",
-    "section": " Certifications",
-    "text": "Certifications\n\n\nSAS Certified Specialist: Base Programming Using SAS 9.4\nView badge\n\n\nMay 2026\n\n\n\n\nIELTS Academic\nCEFR level C1. Overall band score 8.0\n\n\nMar 2025\n\n\n\n\nCambridge English: First (FCE)\nCEFR level C1. Overall score 184/190\n\n\nJun 2021"
-  },
-  {
-    "objectID": "cv/index.html#languages",
-    "href": "cv/index.html#languages",
-    "title": "Curriculum Vitae",
-    "section": " Language skills",
-    "text": "Language skills\n\n\nItalian\n\n\nNative\n\n\n\n\nEnglish\n\n\nC1"
-  },
-  {
-    "objectID": "cv/index.html#digital-skills",
-    "href": "cv/index.html#digital-skills",
-    "title": "Curriculum Vitae",
-    "section": " Digital and computer skills",
-    "text": "Digital and computer skills\nGeneral knowledge\nWindows · Android · Microsoft Office (Word, Excel, PowerPoint, Outlook, Teams) · Google Workspace (Docs, Sheets, Slides, Drive, Forms, Colab)\nProgramming languages\nR, Rmd (R Markdown) and Qmd (Quarto Markdown) · Python for statistical analysis (pandas, NumPy, SciPy, Matplotlib, seaborn, scikit-learn, PyTorch, TensorFlow, Keras) and Jupyter Notebooks · Basic knowledge and understanding of HTML, CSS, Javascript\nOther software and tools\nSAS · Tableau · Gretl · Quarto websites · Version control using Git (basic knowledge) · Stata (basic knowledge) · SPSS (basic knowledge) · LaTeX (basic knowledge) · Qualtrics (basic knowledge)"
-  },
-  {
-    "objectID": "cv/index.html#social-activities",
-    "href": "cv/index.html#social-activities",
-    "title": "Curriculum Vitae",
-    "section": " Social and political activities",
-    "text": "Social and political activities\n\n\nPoll worker\nComune di Bologna (Italy)\n\n21-23/3/2026 (Referendum): President - Ordinary polling station\n7-9/6/2025 (Referendum): Scrutineer acting as Vice President - Ordinary polling station\n16-18/11/2024 (Regional Elections): Scrutineer acting as Vice President - Ordinary polling station\n8-10/06/2024 (European Elections): Scrutineer - Ordinary polling station\n25-26/09/2022 (National Elections): Scrutineer - Postal voting counting station\n\n\n\n2022 - 2026"
-  },
-  {
-    "objectID": "cv/index.html#other-experiences",
-    "href": "cv/index.html#other-experiences",
-    "title": "Curriculum Vitae",
-    "section": " Other experiences",
-    "text": "Other experiences\n\n\nCourse “The profession of the economic analyst”\nBanca d’Italia, Bologna office (Italy)\nAnalysis of regional and national economic data and creation of a brief results report, presented to the managers of the Bologna office; learning about the tasks and departments of Central Banks and the organisation of the European system.\n\n\n25-29 Jan 2021\n\n\n\n\nSummer School ‘Bio engineering: a week between genetics and electronics in a biomedical laboratory’\nOpificio Golinelli (Bologna, Italy)\nDuring the summer school week, students build a fundamental tool for genetic analysis: the thermocycler. The device is assembled and programmed using Arduino, the well-known open source hardware/software platform that allows electronic prototypes to be made. Participants use it to perform a genetic test on some of their own DNA sequences. The results will then be compared with those obtained by similar commercial tools.\n\n\n15-19 Jun 2020"
   }
 ]
