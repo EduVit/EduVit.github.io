@@ -1,0 +1,189 @@
+---
+title: "Curriculum Vitae"
+body-classes: cv-page
+toc: true
+toc-depth: 2
+format:
+  html: default
+  typst:
+    author: "Eduardo Vitale"
+    toc: false
+    output-file: CV-Website-EN.pdf
+    papersize: a4
+    margin:
+      x: 20mm
+      y: 20mm
+    include-in-header: cv.typ
+filters:
+  - cv-pdf.lua
+resources:
+  - CV-Europass-EN.pdf
+  - CV-Europass-IT.pdf
+language:
+  related-formats-title: "Download CV"
+format-links:
+  - format: typst
+    text: "Website version (EN)"
+    icon: file-pdf
+  - text: "Europass version (EN)"
+    href: CV-Europass-EN.pdf
+    icon: file-pdf
+  - text: "Europass version (IT)"
+    href: CV-Europass-IT.pdf
+    icon: file-pdf
+  - html # adds no link: it stops Quarto adding a second link to the website version
+---
+
+## {{< fa graduation-cap >}} Education and training {#education}
+
+:::: {.cv-entry}
+::: {.cv-entry-main}
+**Master's Degree in Statistical Sciences**\
+**Curriculum: Data Science**\
+Alma Mater Studiorum - Università di Bologna (Bologna, Italy)\
+*EQF level: 7 · National classification: LM-82 R*
+:::
+::: {.cv-entry-date}
+Sep 2025 - Current
+:::
+::::
+
+:::: {.cv-entry}
+::: {.cv-entry-main}
+**Overseas Exchange Semester**\
+Monash University (Melbourne, Australia)
+:::
+::: {.cv-entry-date}
+Jul - Dec 2026
+:::
+::::
+
+:::: {.cv-entry}
+::: {.cv-entry-main}
+**Bachelor's Degree in Statistical Sciences**\
+**Curriculum: Economics and Business**\
+Alma Mater Studiorum - Università di Bologna (Bologna, Italy)\
+Thesis: A study of health conditions and lifestyle habits in Italy using correspondence analysis (in Italian)\
+*EQF level: 6 · National classification: L-41*
+:::
+::: {.cv-entry-date}
+Sep 2022 - Jul 2025
+:::
+::::
+
+:::: {.cv-entry}
+::: {.cv-entry-main}
+**Upper Secondary Education Diploma - Scientific Lyceum**\
+**Curriculum: Advanced Scientific Track**\
+Liceo Scientifico “Enrico Fermi” (Bologna, Italy)\
+*EQF level: 4*
+:::
+::: {.cv-entry-date}
+Sep 2017 - Jul 2022
+:::
+::::
+
+## {{< fa certificate >}} Certifications {#certifications}
+
+:::: {.cv-entry}
+::: {.cv-entry-main}
+**SAS Certified Specialist: Base Programming Using SAS 9.4**\
+[View badge](https://www.credly.com/badges/1765853e-7fba-4a34-a681-5e344c31578a/public_url)
+:::
+::: {.cv-entry-date}
+May 2026
+:::
+::::
+
+:::: {.cv-entry}
+::: {.cv-entry-main}
+**IELTS Academic**\
+CEFR level C1. Overall band score 8.0
+:::
+::: {.cv-entry-date}
+Mar 2025
+:::
+::::
+
+:::: {.cv-entry}
+::: {.cv-entry-main}
+**Cambridge English: First (FCE)**\
+CEFR level C1. Overall score 184/190
+:::
+::: {.cv-entry-date}
+Jun 2021
+:::
+::::
+
+## {{< fa language >}} Language skills {#languages}
+
+:::: {.cv-entry}
+::: {.cv-entry-main}
+**Italian**
+:::
+::: {.cv-entry-date}
+Native
+:::
+::::
+
+:::: {.cv-entry}
+::: {.cv-entry-main}
+**English**
+:::
+::: {.cv-entry-date}
+C1
+:::
+::::
+
+## {{< fa laptop-code >}} Digital and computer skills {#digital-skills}
+
+**General knowledge**\
+Windows · Android · Microsoft Office (Word, Excel, PowerPoint, Outlook, Teams) · Google Workspace (Docs, Sheets, Slides, Drive, Forms, Colab)
+
+**Programming languages**\
+R, Rmd (R Markdown) and Qmd (Quarto Markdown) · Python for statistical analysis (pandas, NumPy, SciPy, Matplotlib, seaborn, scikit-learn, PyTorch, TensorFlow, Keras) and Jupyter Notebooks · Basic knowledge and understanding of HTML, CSS, Javascript
+
+**Other software and tools**\
+SAS · Tableau · Gretl · Quarto websites · Version control using Git (basic knowledge) · Stata (basic knowledge) · SPSS (basic knowledge) · LaTeX (basic knowledge) · Qualtrics (basic knowledge)
+
+## {{< fa check-to-slot >}} Social and political activities {#social-activities}
+
+:::: {.cv-entry}
+::: {.cv-entry-main}
+**Poll worker**\
+Comune di Bologna (Italy)
+
+- 21-23/3/2026 (Referendum): President - Ordinary polling station
+- 7-9/6/2025 (Referendum): Scrutineer acting as Vice President - Ordinary polling station
+- 16-18/11/2024 (Regional Elections): Scrutineer acting as Vice President - Ordinary polling station
+- 8-10/06/2024 (European Elections): Scrutineer - Ordinary polling station
+- 25-26/09/2022 (National Elections): Scrutineer - Postal voting counting station
+:::
+::: {.cv-entry-date}
+2022 - 2026
+:::
+::::
+
+## {{< fa lightbulb >}} Other experiences {#other-experiences}
+
+:::: {.cv-entry}
+::: {.cv-entry-main}
+**Course "The profession of the economic analyst"**\
+Banca d'Italia, Bologna office (Italy)\
+Analysis of regional and national economic data and creation of a brief results report, presented to the managers of the Bologna office; learning about the tasks and departments of Central Banks and the organisation of the European system.
+:::
+::: {.cv-entry-date}
+25-29 Jan 2021
+:::
+::::
+
+:::: {.cv-entry}
+::: {.cv-entry-main}
+**Summer School 'Bio engineering: a week between genetics and electronics in a biomedical laboratory'**\
+Opificio Golinelli (Bologna, Italy)\
+During the summer school week, students build a fundamental tool for genetic analysis: the thermocycler. The device is assembled and programmed using Arduino, the well-known open source hardware/software platform that allows electronic prototypes to be made. Participants use it to perform a genetic test on some of their own DNA sequences. The results will then be compared with those obtained by similar commercial tools.
+:::
+::: {.cv-entry-date}
+15-19 Jun 2020
+:::
+::::
