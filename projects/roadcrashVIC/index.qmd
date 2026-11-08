@@ -2,8 +2,6 @@
 title: "roadcrashVIC"
 description: "An R package and Shiny app for exploring road crashes in Victoria, Australia, from 2012 to 2025."
 date: "2026-11-02"
-categories: [Shiny, Road safety, Maps, Victoria]
-image: app-my-area.png
 title-block-banner: true
 toc: true
 toc-title: "Contents"
@@ -32,9 +30,9 @@ The app is designed for members of the public who want to understand road safety
 
 ## Preview
 
-![The Victoria tab: sidebar controls, value boxes and the trend chart](app-victoria.png)
+![The Victoria tab: sidebar controls, value boxes and the trend chart](app-victoria.png){#fig-victoria}
 
-![The My area tab: crash locations and the roads with the most crashes in the selected LGAs](app-my-area.png)
+![The My area tab: crash locations and the roads with the most crashes in the selected LGAs](app-my-area.png){#fig-my-area}
 
 ## Try it
 
