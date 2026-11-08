@@ -18,7 +18,7 @@
     "href": "projects/roadcrashVIC/index.html",
     "title": "roadcrashVIC",
     "section": "",
-    "text": "Source code  Documentation\nroadcrashVIC is an R package and Shiny app for exploring road crashes in Victoria, Australia, from 2012 to 2025: how they have changed over time, where and when they happen, and who is involved."
+    "text": "roadcrashVIC is an R package and Shiny app for exploring road crashes in Victoria, Australia, from 2012 to 2025: how they have changed over time, where and when they happen, and who is involved."
   },
   {
     "objectID": "projects/roadcrashVIC/index.html#who-it-is-for",
