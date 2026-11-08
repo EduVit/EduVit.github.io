@@ -1,0 +1,18 @@
+---
+title: "Projects"
+title-block-banner: false
+---
+
+:::: {.project-entry}
+::: {.project-image}
+[![](roadcrashVIC/app-my-area.png){fig-alt="The Victoria tab of the roadcrashVIC app"}](roadcrashVIC/index.qmd)
+:::
+::: {.project-text}
+## [roadcrashVIC](roadcrashVIC/index.qmd)
+
+An R package and Shiny app for exploring road crashes in Victoria, Australia, from 2012 to 2025.
+
+[{{< fa brands github >}} Source code](https://github.com/ETC5523-2026/etc5523-assignment-4-eduvit){.btn .btn-sm .about-link}
+[{{< fa book >}} Documentation](https://etc5523-2026.github.io/etc5523-assignment-4-eduvit/){.btn .btn-sm .about-link}
+:::
+::::

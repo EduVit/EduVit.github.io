@@ -157,6 +157,27 @@ div.quarto-post .listing-categories .listing-category,
 .quarto-title .quarto-categories .quarto-category {color: $tag-fg; background-color: $tag-bg; border: 1px solid $tag-border; opacity: 1;}
 div.quarto-post .listing-categories .listing-category {pointer-events: none; cursor: default;}
 
+/* ---------- Projects ---------- */
+
+/* project rows: screenshot on the left, text on the right */
+.project-entry {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  column-gap: $space-l;
+  align-items: center;
+  padding-bottom: $space-l;
+  margin-bottom: $space-l;
+  border-bottom: 1px solid $border;
+}
+.project-text h2 {margin-top: 0;}
+.project-text h2 a {color: $text; text-decoration: none; font-weight: bold;}
+.project-image p {margin: 0;}
+
+/* small screens: screenshot above the text */
+@media (max-width: 576px) {
+  .project-entry {grid-template-columns: 1fr; row-gap: $space-m;}
+}
+
 /* ---------- Blog posts ---------- */
 
 /* author and date inside the title banner */
