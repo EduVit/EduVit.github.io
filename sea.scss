@@ -20,7 +20,7 @@ $button-bg: transparent;
 $button-fg: $navy;
 $button-border: $navy;
 
-// page, text, link and navbar colours
+// page, text, link, navbar and footer colours
 $body-bg: $foam;
 $body-color: $text;
 $headings-color: $text;
@@ -28,6 +28,7 @@ $link-color: $link;
 $navbar-bg: $navy;
 $navbar-fg: $foam;
 $footer-fg: $navy;
+$code-color: $navy;   // inline code, e.g. `roadcrashVIC`
 
 // spacing: small, medium, large
 $space-s: 0.5rem;
@@ -38,29 +39,20 @@ $space-l: 2rem;
 
 /* ---------- Spacing ---------- */
 
-/* medium: between paragraphs, lists, tables, code, figures and CV entries */
-main p, main ul, main ol, main table, main pre, main .cell,
-main .quarto-float, main figure, main .cv-entry {margin-top: 0; margin-bottom: $space-m;}
+/* medium: between paragraphs, lists, tables, code and CV entries */
+main p, main ul, main ol, main table, main pre, main .cell, main .cv-entry {margin-top: 0; margin-bottom: $space-m;}
 
 /* large: above and below a figure or table with its caption */
 main .quarto-figure, main .quarto-float, main .cell:has(figure, .quarto-float) {margin-top: $space-l; margin-bottom: $space-l;}
 
 /* inside a code cell or a figure the outer block sets the gap */
-main .cell .cell-output-display, main .cell .quarto-float, main .cell figure {margin: 0;}
-main .quarto-float table, main figure table {margin-bottom: 0;}
-main .quarto-figure figure, main figure p, main figure .figure-img {margin: 0;}
-
-/* small: between a figure or table and its caption */
-figcaption, .figure-caption, .quarto-float-caption {margin-top: $space-s; margin-bottom: 0; padding-bottom: 0;}
-
-/* large above section titles, medium below */
-main h2 {margin-top: $space-l; margin-bottom: $space-m;}
+main .cell .cell-output-display, main .cell .quarto-float, main .cell figure,
+main .quarto-figure figure, main figure p, main figure .figure-img, main .quarto-float table {margin: 0;}
 
 /* large: above the page content, and between the page title or banner and the content */
 #quarto-content main.content {margin-top: $space-l; padding-top: 0;}
 #title-block-header {margin-bottom: $space-l;}
 #title-block-header:has(.quarto-title-banner) {margin-bottom: 0;}
-.quarto-title-banner {margin-bottom: 0;}
 .quarto-title .description {margin-bottom: $space-s;}
 
 /* side column (contents, categories) starts level with the page content */
@@ -68,6 +60,12 @@ main h2 {margin-top: $space-l; margin-bottom: $space-m;}
 #quarto-margin-sidebar #toc-title {margin-top: 0;}
 
 /* ---------- All pages ---------- */
+
+/* section titles: large gap above, medium below, no line (the CV has its own) */
+main h2 {margin-top: $space-l; margin-bottom: $space-m; border-bottom: none; padding-bottom: 0;}
+
+/* long links (e.g. in references) wrap instead of widening the page on phones */
+main a {overflow-wrap: anywhere;}
 
 /* border around images and plots */
 main img {border: 1px solid $border; border-radius: 6px;}
@@ -78,24 +76,23 @@ div:has(> .plotly.html-widget) {
   padding: 12px;
 }
 
-/* figure captions */
+/* figure and table captions: navy, centred, small gap under the figure */
 figcaption, .figure-caption, .quarto-float-caption {
   color: $link;
   text-align: center;
+  margin-top: $space-s;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
-/* buttons under the home photo */
+/* buttons: home photo links, project links */
 .about-link {color: $button-fg; background-color: $button-bg; border: 1px solid $button-border;}
 .about-link:hover {color: $navbar-fg; background-color: $button-border;}
 
-/* table of contents title */
+/* side column: contents title, "Download CV" and project "Links" in bold, all the same size */
 #toc-title {font-weight: bold;}
-
-/* no line under section titles (the CV has its own) */
-main h2 {border-bottom: none; padding-bottom: 0;}
-
-/* icons before section titles */
-main h2 .fa-solid, main h2 .fa-regular {color: $link; margin-right: 0.35rem;}
+.sidebar .quarto-alternate-formats > h2, .sidebar .quarto-other-links > h2 {font-size: $toc-font-size; font-weight: bold;}
+.sidebar .quarto-alternate-formats a, .sidebar .quarto-other-links a {font-size: $toc-font-size;}
 
 /* ---------- Navbar ---------- */
 
@@ -110,6 +107,7 @@ main h2 .fa-solid, main h2 .fa-regular {color: $link; margin-right: 0.35rem;}
   color: $text;
   padding-top: 1.5rem;
   padding-bottom: 1.2rem;
+  margin-bottom: 0;
 }
 .quarto-title-banner h1 {color: $text;}
 
@@ -118,16 +116,12 @@ main h2 .fa-solid, main h2 .fa-regular {color: $link; margin-right: 0.35rem;}
 
 /* ---------- Home page ---------- */
 
-/* line between the photo and the text */
+/* line between the photo and the text, ending with the last paragraph */
 div.quarto-about-trestles .about-contents {border-left-color: $border; align-self: flex-start;}
-
-/* text starts level with the photo */
-#quarto-content .about-contents main.content {margin: 0;}
-
-/* line ends with the last paragraph */
 .about-contents main p:last-child {margin-bottom: 0;}
 
-/* buttons close to the name */
+/* text starts level with the photo, buttons close to the name */
+#quarto-content .about-contents main.content {margin: 0;}
 .about-entity #title-block-header {margin-bottom: $space-s;}
 
 /* ---------- Blog listing ---------- */
@@ -158,7 +152,7 @@ div.quarto-post {border-bottom: 1px solid $border; padding-bottom: $space-m;}
 /* category tags, not clickable in the listing */
 .listing-categories {padding-top: 5px;}
 div.quarto-post .listing-categories .listing-category,
-.quarto-title .quarto-categories .quarto-category {color: $tag-fg; background-color: $tag-bg; border: 1px solid $tag-border; opacity: 1;}
+.quarto-title .quarto-categories .quarto-category, .project-tag {color: $tag-fg; background-color: $tag-bg; border: 1px solid $tag-border; opacity: 1;}
 div.quarto-post .listing-categories .listing-category {pointer-events: none; cursor: default;}
 
 /* ---------- Projects ---------- */
@@ -177,48 +171,49 @@ div.quarto-post .listing-categories .listing-category {pointer-events: none; cur
 .project-text h2 a {color: $text; text-decoration: none; font-weight: bold;}
 .project-image p {margin: 0;}
 
+/* tags under the project name, same look as the tags in a blog post */
+.project-tag {display: inline-block; font-size: 0.65em; text-transform: uppercase; padding: 0.25em 0.75em; border-radius: 0.25rem; margin-right: 4px;}
+
 /* thumbnail: fixed 3:2 shape, the image fills it */
 .project-image img {width: 100%; aspect-ratio: 3 / 2; object-fit: cover;}
-
-/* small screens: thumbnail above the text */
-@media (max-width: 576px) {
-  .project-entry {grid-template-columns: 1fr; row-gap: $space-m;}
-}
 
 /* ---------- Blog posts ---------- */
 
 /* author and date inside the title banner */
-#title-block-header:has(.quarto-title-meta-heading) {
-  background-color: $banner-bg;
-  padding-bottom: 1.2rem;
-}
-#title-block-header:has(.quarto-title-meta-heading) .quarto-title-banner {
-  margin-bottom: 0;
-  padding-bottom: 0.6rem;
-}
+#title-block-header:has(.quarto-title-meta-heading) {background-color: $banner-bg; padding-bottom: 1.2rem;}
+#title-block-header:has(.quarto-title-meta-heading) .quarto-title-banner {padding-bottom: 0.6rem;}
 #title-block-header.quarto-title-block.default .quarto-title-meta-heading {font-weight: bold;}
 
-/* ---------- CV and dated entries ---------- */
+/* references: medium gap between entries, as between paragraphs */
+#refs .csl-entry {margin-bottom: $space-m;}
 
-/* line under section titles, small gap between title and line */
+/* ---------- CV ---------- */
+
+/* section titles: icon in navy, line underneath */
+main h2 .fa-solid, main h2 .fa-regular {color: $link; margin-right: 0.35rem;}
 .cv-page main h2 {border-bottom: 1px solid $border; padding-bottom: $space-s;}
 
 /* description on the left, dates on the right */
 .cv-entry {
   display: grid;
   grid-template-columns: minmax(0, 1fr) max-content;
-  column-gap: 1rem;
+  column-gap: $space-m;
 }
 .cv-entry-main p, .cv-entry-date p {margin: 0;}
 .cv-entry-main ul {margin-top: $space-s; margin-bottom: 0;}
 .cv-entry-date {text-align: right; white-space: nowrap; font-style: italic; color: $link;}
 
-/* small screens: dates under the description */
+/* ---------- Small screens ---------- */
+
+/* home page: gap between the navbar and the photo when the page is stacked */
+@media (max-width: 991.98px) {
+  div.quarto-about-trestles .about-entity {margin-top: $space-l;}
+}
+
 @media (max-width: 576px) {
+  /* project thumbnail above the text */
+  .project-entry {grid-template-columns: 1fr; row-gap: $space-m;}
+  /* CV dates under the description */
   .cv-entry {grid-template-columns: 1fr;}
   .cv-entry-date {text-align: left;}
 }
-
-/* "Download CV" and project "Links": same size as the contents, heading in bold */
-.sidebar .quarto-alternate-formats > h2, .sidebar .quarto-other-links > h2 {font-size: $toc-font-size; font-weight: bold;}
-.sidebar .quarto-alternate-formats a, .sidebar .quarto-other-links a {font-size: $toc-font-size;}

@@ -5,6 +5,8 @@ author: "Eduardo Vitale"
 date: "2026-10-09"
 categories: [Healthcare, Public health, Germany, Europe]
 image: "thumbnail.jpg"
+bibliography: references.bib
+csl: nlm-name-year.csl
 execute:
     echo: false
     warning: false
@@ -51,25 +53,25 @@ risk_de <- tot_de["Cases"]/sum(res_de@hospital_discharges) * 100 # HAIs per 100 
 risk_eu <- tot_eu["Cases"]/sum(res_eu@hospital_discharges) * 100
 ```
 
-Scrubbing up before surgery is one of medicine's oldest routines, and one of its most effective. The practice dates back to 1847, when Ignaz Semmelweis, a doctor at Vienna General Hospital, made the doctors on his maternity ward disinfect their hands, and deaths among new mothers fell within months; by the 1870s, surgeons were routinely disinfecting their hands and instruments before operating ([Hartmann-Gruppe](https://www.hartmann.info/en/products/brands/sterillium/stories/the-evolution-of-surgical-hand-hygiene)). Today, before every operation, surgeons spend minutes washing their hands and forearms, because a single contaminated hand can carry bacteria straight into a patient's body during the procedure.
+Scrubbing up before surgery is one of medicine's oldest routines, and one of its most effective. The practice dates back to 1847, when Ignaz Semmelweis, a doctor at Vienna General Hospital, made the doctors on his maternity ward disinfect their hands, and deaths among new mothers fell within months; by the 1870s, surgeons were routinely disinfecting their hands and instruments before operating [@hartmann]. Today, before every operation, surgeons spend minutes washing their hands and forearms, because a single contaminated hand can carry bacteria straight into a patient's body during the procedure.
 
 ![](thumbnail.jpg){fig-alt="Two medical professionals scrubbing their hands before surgery."}
 
-Nonetheless, hospitals remain a place where people catch infections. On any given day, about **one in 18 patients** in a European hospital has at least one infection acquired during their stay ([ECDC, 2013](https://www.ecdc.europa.eu/en/publications-data/point-prevalence-survey-healthcare-associated-infections-and-antimicrobial-use-0)). These are called healthcare-associated infections (HAIs), infections that develop in hospital and are unrelated to the reason for admission. A procedure can go perfectly, and the patient can still develop a urinary tract infection from a catheter a few days later. <br> In Germany, an estimated 20 to 30% of HAIs could be prevented (Gastmeier et al., 2010), but prevention resources are limited, so knowing which infections cause the most harm matters as much as knowing how many there are.
+Nonetheless, hospitals remain a place where people catch infections. On any given day, about **one in 18 patients** in a European hospital has at least one infection acquired during their stay [@ecdc2013]. These are called healthcare-associated infections (HAIs), infections that develop in hospital and are unrelated to the reason for admission. A procedure can go perfectly, and the patient can still develop a urinary tract infection from a catheter a few days later. <br> In Germany, an estimated 20 to 30% of HAIs could be prevented [@gastmeier2010], but prevention resources are limited, so knowing which infections cause the most harm matters as much as knowing how many there are.
 
-Germany is a particularly interesting case: per hospitalised patient, its infection rate is below the European average; across the whole population, however, Germany has more HAIs per person than the European average ([Zacher et al., 2019](https://doi.org/10.2807/1560-7917.ES.2019.24.46.1900135)). So how can fewer infections per hospitalised patient end up as more infections overall?
+Germany is a particularly interesting case: per hospitalised patient, its infection rate is below the European average; across the whole population, however, Germany has more HAIs per person than the European average [@zacher2019]. So how can fewer infections per hospitalised patient end up as more infections overall?
 
 ## Where the numbers come from
 
-The data comes from a large survey run by the European Centre for Disease Prevention and Control in 2011 and 2012 (ECDC, 2013). On a single day, staff in each participating hospital checked every patient and recorded who had an HAI. Germany contributed a representative sample of 46 hospitals and `r format(sum(germany@num_survey_patients), big.mark=",")` patients; across the EU/EEA (the European Union plus Iceland, Liechtenstein and Norway), more than 1,100 hospitals and over 270,000 patients took part.
+The data comes from a large survey run by the European Centre for Disease Prevention and Control in 2011 and 2012 [@ecdc2013]. On a single day, staff in each participating hospital checked every patient and recorded who had an HAI. Germany contributed a representative sample of 46 hospitals and `r format(sum(germany@num_survey_patients), big.mark=",")` patients; across the EU/EEA (the European Union plus Iceland, Liechtenstein and Norway), more than 1,100 hospitals and over 270,000 patients took part.
 
 However, a single day only shows how many patients are infected on that day, not how many infections happen over a year, or how many people die from them. To fill this gap, the researchers built [BHAI](https://cran.r-project.org/package=BHAI), a free tool for the [R programming language](https://www.r-project.org/). <br> It combines the survey with how long patients stay in hospital and how long infections usually last (both estimated from the survey itself), how many people go through hospital each year (from official statistics), and how likely each infection is to cause complications or death (based on scientific literature). Since none of these is known exactly, BHAI repeats the calculation 1,000 times and reports a best estimate together with a likely range of values.
 
-The study looks at five common infections: pneumonia, surgical site infections, bloodstream infections, urinary tract infections and *Clostridioides difficile* (*C. difficile*) infections, a severe gut infection often triggered by antibiotics. Together, these five make up about four in five of all HAIs. Their impact is measured in disability-adjusted life years (DALYs), or **healthy years of life lost**, which add up years lost to early death and years lived with illness. Earlier work had estimated this burden for Europe as a whole (Cassini et al., 2016); this study applies the same idea to Germany.
+The study looks at five common infections: pneumonia, surgical site infections, bloodstream infections, urinary tract infections and *Clostridioides difficile* (*C. difficile*) infections, a severe gut infection often triggered by antibiotics. Together, these five make up about four in five of all HAIs. Their impact is measured in disability-adjusted life years (DALYs), or **healthy years of life lost**, which add up years lost to early death and years lived with illness. Earlier work had estimated this burden for Europe as a whole [@cassini2016]; this study applies the same idea to Germany.
 
 ## How big is the problem?
 
-For a single patient, the risk is relatively small: in 2011, about 1 in `r round(100 / risk_de, -1)` hospital stays in Germany led to one of these five infections, although the risk is higher for the sickest patients, such as those in intensive care (ECDC, 2013). 
+For a single patient, the risk is relatively small: in 2011, about 1 in `r round(100 / risk_de, -1)` hospital stays in Germany led to one of these five infections, although the risk is higher for the sickest patients, such as those in intensive care [@ecdc2013]. 
 
 Across the whole country, however, these small risks add up. In 2011, there were an estimated `r format(round(tot_de["Cases"]), big.mark=",")` cases of these five infections in Germany, causing `r format(round(tot_de["Deaths"]), big.mark=",")` deaths and adding up to `r format(round(tot_de["DALY"]), big.mark=",")` healthy years of life lost (@tbl-germany), or `r round(per100k_de["DALY"], 1)` for every 100,000 people. To put that in perspective, the combined effect of four other infectious diseases (influenza, *Salmonella*, hepatitis B and measles) cost Germany 39.4 healthy years per 100,000 people. This means that hospital infections cost **almost eight times as much**. Most of these years, about `r format(round(tot_de["YLL"], -3), big.mark=",")`, are lost to early deaths, whereas about `r format(round(tot_de["YLD"], -3), big.mark=",")` are years lived with the after-effects of an infection.
 
@@ -205,12 +207,5 @@ All figures and tables in this post come from running BHAI on the same data used
 
 ## References
 
-Cassini A, Plachouras D, Eckmanns T, Abu Sin M, Blank HP, Ducomble T, et al. **Burden of Six Healthcare-Associated Infections on European Population Health: Estimating Incidence-Based Disability-Adjusted Life Years through a Population Prevalence-Based Modelling Study.** *PLoS Med. 2016;13(10):e1002150.* [doi:10.1371/journal.pmed.1002150](https://doi.org/10.1371/journal.pmed.1002150) PMID: 27755545
-
-European Centre for Disease Prevention and Control (ECDC). **Point prevalence survey of healthcare-associated infections and antimicrobial use in European acute care hospitals.** *Stockholm: ECDC; 2013.* <https://www.ecdc.europa.eu/en/publications-data/point-prevalence-survey-healthcare-associated-infections-and-antimicrobial-use-0>
-
-Gastmeier P, Brunkhorst F, Schrappe M, Kern W, Geffers C. **How many nosocomial infections are avoidable?** *Dtsch Med Wochenschr. 2010;135(3):91-3.* [doi:10.1055/s-0029-1244823](https://doi.org/10.1055/s-0029-1244823) PMID: 20077383
-
-Hartmann-Gruppe. **The evolution of surgical hand hygiene.** Accessed 7 October 2026. <https://www.hartmann.info/en/products/brands/sterillium/stories/the-evolution-of-surgical-hand-hygiene>
-
-Zacher B, Haller S, Willrich N, Walter J, Abu Sin M, Cassini A, Plachouras D, Suetens C, Behnke M, Gastmeier P, Wieler LH, Eckmanns T. **Application of a new methodology and R package reveals a high burden of healthcare-associated infections (HAI) in Germany compared to the average in the European Union/European Economic Area, 2011 to 2012.** *Euro Surveillance, 2019;24(46):pii=1900135.* [doi:10.2807/1560-7917.ES.2019.24.46.1900135](https://doi.org/10.2807/1560-7917.ES.2019.24.46.1900135)
+::: {#refs}
+:::
