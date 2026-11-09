@@ -7,7 +7,7 @@ about:
     image-shape: round
     links:
         - icon: github
-          text: Github
+          text: GitHub
           href: https://github.com/EduVit
           target: _blank
         - icon: envelope

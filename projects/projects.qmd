@@ -1,6 +1,5 @@
 ---
 title: "Projects"
-title-block-banner: false
 ---
 
 :::: {.project-entry}
@@ -9,6 +8,7 @@ title-block-banner: false
 :::
 ::: {.project-text}
 ## [roadcrashVIC](roadcrashVIC/index.qmd)
+[Shiny]{.project-tag} [Road safety]{.project-tag} [Maps]{.project-tag} [Victoria]{.project-tag}
 
 An R package and Shiny app for exploring road crashes in Victoria, Australia, from 2012 to 2025.
 

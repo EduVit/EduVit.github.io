@@ -165,7 +165,7 @@ How can each German patient be at lower risk, while Germany as a whole has more 
 
 ```{r}
 #| label: tbl-paradox
-#| tbl-cap: "Each hospital stay in Germany is less likely to lead to an infection, but Germans go into hospital more often, so Germany has more infections per person than the EU/EEA average (2011–2012). Numbers are best estimates; brackets shows the uncertainty."
+#| tbl-cap: "Each hospital stay in Germany is less likely to lead to an infection, but Germans go into hospital more often, so Germany has more infections per person than the EU/EEA average (2011–2012). Numbers are best estimates; brackets show the uncertainty."
 paradox_col <- function(res) {
     tot <- res@bhai_summary$ALL$TOTAL # rows: Cases, Deaths, DALY, ecc; columns: 2.5%, 50%, 97.5%
     cell <- function(x, d) {

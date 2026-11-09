@@ -1,11 +1,9 @@
--- PDF version: each .cv-entry becomes cv-entry[description][date] (defined in cv.typ)
-function Div(div)
-  if quarto.doc.is_format("typst") and div.classes:includes("cv-entry") then
-    local row = pandoc.Blocks({pandoc.RawBlock("typst", "#cv-entry[")})
-    row:extend(div.content[1].content)
-    row:insert(pandoc.RawBlock("typst", "]["))
-    row:extend(div.content[2].content)
-    row:insert(pandoc.RawBlock("typst", "]"))
-    return row
+-- PDF version: a paragraph that starts with a [date]{.cv-date} becomes cv-entry[text][date] (defined in cv.typ)
+function Para(para)
+  local date = para.content[1]
+  if quarto.doc.is_format("typst") and date and date.t == "Span" and date.classes:includes("cv-date") then
+    para.content:remove(1)
+    if para.content[1] and para.content[1].t == "Space" then para.content:remove(1) end
+    return {pandoc.RawBlock("typst", "#cv-entry["), para, pandoc.RawBlock("typst", "]["), pandoc.Plain(date.content), pandoc.RawBlock("typst", "]")}
   end
 end

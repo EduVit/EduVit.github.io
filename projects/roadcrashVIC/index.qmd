@@ -4,7 +4,6 @@ description: "An R package and Shiny app for exploring road crashes in Victoria,
 date: "2026-11-02"
 categories: [Shiny, Road safety, Maps, Victoria]
 title-block-banner: true
-toc: true
 toc-title: "Contents"
 language:
     other-links-title: "Links"

@@ -2,29 +2,16 @@
 
 /*-- scss:defaults --*/
 // colours
-$navy: #0d3b66;    // navbar, links, borders, buttons
+$navy: #0d3b66;    // navbar, links, lines and borders, buttons, captions
 $sky: #b3cfe7;     // title banner, intro box
 $foam: #d6e6f2;    // page background
-$ink: #08131f;     // text and tags
-
-// usage of each colour
-$text: $ink;
-$link: $navy;
-$border: $navy;
-$banner-bg: $sky;
-$box-bg: $sky;
-$tag-bg: transparent;
-$tag-fg: $ink;
-$tag-border: $ink;
-$button-bg: transparent;
-$button-fg: $navy;
-$button-border: $navy;
+$ink: #08131f;     // text, headings, tags
 
 // page, text, link, navbar and footer colours
 $body-bg: $foam;
-$body-color: $text;
-$headings-color: $text;
-$link-color: $link;
+$body-color: $ink;
+$headings-color: $ink;
+$link-color: $navy;
 $navbar-bg: $navy;
 $navbar-fg: $foam;
 $footer-fg: $navy;
@@ -34,13 +21,12 @@ $code-color: $navy;   // inline code, e.g. `roadcrashVIC`
 $space-s: 0.5rem;
 $space-m: 1rem;
 $space-l: 2rem;
-
 /*-- scss:rules --*/
 
 /* ---------- Spacing ---------- */
 
-/* medium: between paragraphs, lists, tables, code and CV entries */
-main p, main ul, main ol, main table, main pre, main .cell, main .cv-entry {margin-top: 0; margin-bottom: $space-m;}
+/* medium: between paragraphs, lists, tables and code */
+main p, main ul, main ol, main table, main pre, main .cell {margin-top: 0; margin-bottom: $space-m;}
 
 /* large: above and below a figure or table with its caption */
 main .quarto-figure, main .quarto-float, main .cell:has(figure, .quarto-float) {margin-top: $space-l; margin-bottom: $space-l;}
@@ -68,17 +54,17 @@ main h2 {margin-top: $space-l; margin-bottom: $space-m; border-bottom: none; pad
 main a {overflow-wrap: anywhere;}
 
 /* border around images and plots */
-main img {border: 1px solid $border; border-radius: 6px;}
+main img {border: 1px solid $navy; border-radius: 6px;}
 div:has(> .plotly.html-widget) {
-  border: 1px solid $border;
+  border: 1px solid $navy;
   border-radius: 6px;
   background-color: #ffffff;
   padding: 12px;
 }
 
 /* figure and table captions: navy, centred, small gap under the figure */
-figcaption, .figure-caption, .quarto-float-caption {
-  color: $link;
+figcaption, .quarto-float-caption {
+  color: $navy;
   text-align: center;
   margin-top: $space-s;
   margin-bottom: 0;
@@ -86,8 +72,8 @@ figcaption, .figure-caption, .quarto-float-caption {
 }
 
 /* buttons: home photo links, project links */
-.about-link {color: $button-fg; background-color: $button-bg; border: 1px solid $button-border;}
-.about-link:hover {color: $navbar-fg; background-color: $button-border;}
+.about-link {color: $navy; border: 1px solid $navy;}
+.about-link:hover {color: $foam; background-color: $navy;}
 
 /* side column: contents title, "Download CV" and project "Links" in bold, all the same size */
 #toc-title {font-weight: bold;}
@@ -103,13 +89,13 @@ figcaption, .figure-caption, .quarto-float-caption {
 /* ---------- Title banner ---------- */
 
 .quarto-title-banner {
-  background-color: $banner-bg;
-  color: $text;
+  background-color: $sky;
+  color: $ink;
   padding-top: 1.5rem;
   padding-bottom: 1.2rem;
   margin-bottom: 0;
 }
-.quarto-title-banner h1 {color: $text;}
+.quarto-title-banner h1 {color: $ink;}
 
 /* title uses the full width of the banner */
 .quarto-title-banner .quarto-title {grid-column: body-content-start / page-end-inset;}
@@ -117,7 +103,7 @@ figcaption, .figure-caption, .quarto-float-caption {
 /* ---------- Home page ---------- */
 
 /* line between the photo and the text, ending with the last paragraph */
-div.quarto-about-trestles .about-contents {border-left-color: $border; align-self: flex-start;}
+div.quarto-about-trestles .about-contents {border-left-color: $navy; align-self: flex-start;}
 .about-contents main p:last-child {margin-bottom: 0;}
 
 /* text starts level with the photo, buttons close to the name */
@@ -132,27 +118,27 @@ div.quarto-about-trestles .about-contents {border-left-color: $border; align-sel
 /* intro box */
 .site-welcome {
   margin-bottom: $space-l;
-  background-color: $box-bg;
-  border: 2px solid $border;
+  background-color: $sky;
+  border: 2px solid $navy;
   border-radius: 6px;
   padding: 0.9rem 1.2rem;
 }
 .site-welcome p:last-child {margin-bottom: 0;}
 
 /* post titles and links */
-div.quarto-post a {color: $text;}
+div.quarto-post a {color: $ink;}
 .listing-title a, .listing-date {font-weight: bold;}
 
 /* line between posts */
-div.quarto-post {border-bottom: 1px solid $border; padding-bottom: $space-m;}
+div.quarto-post {border-bottom: 1px solid $navy; padding-bottom: $space-m;}
 
 /* line between the posts and the categories */
-#quarto-margin-sidebar:has(.quarto-listing-category) {border-left: 1px solid $border; padding-left: 1.5em; align-self: start;}
+#quarto-margin-sidebar:has(.quarto-listing-category) {border-left: 1px solid $navy; padding-left: 1.5em; align-self: start;}
 
 /* category tags, not clickable in the listing */
 .listing-categories {padding-top: 5px;}
 div.quarto-post .listing-categories .listing-category,
-.quarto-title .quarto-categories .quarto-category, .project-tag {color: $tag-fg; background-color: $tag-bg; border: 1px solid $tag-border; opacity: 1;}
+.quarto-title .quarto-categories .quarto-category, .project-tag {color: $ink; border: 1px solid $ink; opacity: 1;}
 div.quarto-post .listing-categories .listing-category {pointer-events: none; cursor: default;}
 
 /* ---------- Projects ---------- */
@@ -165,10 +151,10 @@ div.quarto-post .listing-categories .listing-category {pointer-events: none; cur
   align-items: center;
   padding-bottom: $space-l;
   margin-bottom: $space-l;
-  border-bottom: 1px solid $border;
+  border-bottom: 1px solid $navy;
 }
 .project-text h2 {margin-top: 0;}
-.project-text h2 a {color: $text; text-decoration: none; font-weight: bold;}
+.project-text h2 a {color: $ink; text-decoration: none; font-weight: bold;}
 .project-image p {margin: 0;}
 
 /* tags under the project name, same look as the tags in a blog post */
@@ -180,7 +166,7 @@ div.quarto-post .listing-categories .listing-category {pointer-events: none; cur
 /* ---------- Blog posts ---------- */
 
 /* author and date inside the title banner */
-#title-block-header:has(.quarto-title-meta-heading) {background-color: $banner-bg; padding-bottom: 1.2rem;}
+#title-block-header:has(.quarto-title-meta-heading) {background-color: $sky; padding-bottom: 1.2rem;}
 #title-block-header:has(.quarto-title-meta-heading) .quarto-title-banner {padding-bottom: 0.6rem;}
 #title-block-header.quarto-title-block.default .quarto-title-meta-heading {font-weight: bold;}
 
@@ -190,18 +176,11 @@ div.quarto-post .listing-categories .listing-category {pointer-events: none; cur
 /* ---------- CV ---------- */
 
 /* section titles: icon in navy, line underneath */
-main h2 .fa-solid, main h2 .fa-regular {color: $link; margin-right: 0.35rem;}
-.cv-page main h2 {border-bottom: 1px solid $border; padding-bottom: $space-s;}
+main h2 .fa-solid, main h2 .fa-regular {color: $navy; margin-right: 0.35rem;}
+.cv-page main h2 {border-bottom: 1px solid $navy; padding-bottom: $space-s;}
 
-/* description on the left, dates on the right */
-.cv-entry {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) max-content;
-  column-gap: $space-m;
-}
-.cv-entry-main p, .cv-entry-date p {margin: 0;}
-.cv-entry-main ul {margin-top: $space-s; margin-bottom: 0;}
-.cv-entry-date {text-align: right; white-space: nowrap; font-style: italic; color: $link;}
+/* dates on the right of each entry */
+.cv-date {float: right; margin-left: $space-m; white-space: nowrap; font-style: italic; color: $navy;}
 
 /* ---------- Small screens ---------- */
 
@@ -213,7 +192,4 @@ main h2 .fa-solid, main h2 .fa-regular {color: $link; margin-right: 0.35rem;}
 @media (max-width: 576px) {
   /* project thumbnail above the text */
   .project-entry {grid-template-columns: 1fr; row-gap: $space-m;}
-  /* CV dates under the description */
-  .cv-entry {grid-template-columns: 1fr;}
-  .cv-entry-date {text-align: left;}
 }
