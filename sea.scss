@@ -153,9 +153,11 @@ div.quarto-post .listing-categories .listing-category {pointer-events: none; cur
   margin-bottom: $space-l;
   border-bottom: 1px solid $navy;
 }
-.project-text h2 {margin-top: 0;}
+/* name, tags and description close together, as in the blog list */
+.project-text h2 {margin-top: 0; margin-bottom: 0.2rem;}
 .project-text h2 a {color: $ink; text-decoration: none; font-weight: bold;}
 .project-image p {margin: 0;}
+.project-text p:has(.project-tag) {margin-bottom: 0.55rem;}
 
 /* tags under the project name, same look as the tags in a blog post */
 .project-tag {display: inline-block; font-size: 0.65em; text-transform: uppercase; padding: 0.25em 0.75em; border-radius: 0.25rem; margin-right: 4px;}
