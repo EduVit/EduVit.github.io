@@ -165,6 +165,16 @@ div.quarto-post .listing-categories .listing-category {pointer-events: none; cur
 /* thumbnail: fixed 3:2 shape, the image fills it */
 .project-image img {width: 100%; aspect-ratio: 3 / 2; object-fit: cover;}
 
+/* app page: navy bar on top of the app frame, like a window title bar */
+.app-bar {display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; column-gap: $space-m; background-color: $navy; color: $foam; border: 1px solid $navy; border-bottom: none; border-radius: 6px 6px 0 0; padding: $space-s $space-m;}
+.app-bar a {color: $foam;}
+.app-bar a:hover {color: #ffffff;}
+.app-bar p {margin: 0;}
+iframe.app-frame {display: block; width: 100%; height: 2200px; border: 1px solid $navy; border-radius: 0 0 6px 6px;}
+
+/* button to open the app on its own: shown only on phones (see Small screens) */
+.app-phone-link {display: none;}
+
 /* ---------- Blog posts ---------- */
 
 /* author and date inside the title banner */
@@ -194,4 +204,8 @@ main h2 .fa-solid, main h2 .fa-regular {color: $navy; margin-right: 0.35rem;}
 @media (max-width: 576px) {
   /* project thumbnail above the text */
   .project-entry {grid-template-columns: 1fr; row-gap: $space-m;}
+  /* app page: phones open the app on its own instead of in a frame */
+  iframe.app-frame {display: none;}
+  .app-bar {border-bottom: 1px solid $navy; border-radius: 6px;}
+  .app-phone-link {display: block; margin-top: $space-m;}
 }

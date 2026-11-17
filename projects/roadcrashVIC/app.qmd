@@ -1,0 +1,17 @@
+---
+pagetitle: "roadcrashVIC app"
+page-layout: full
+toc: false
+---
+
+::: {.app-bar}
+**roadcrashVIC app** · loading can take up to a minute
+
+[About the project](index.qmd)
+:::
+
+::: {.app-phone-link}
+[Open the app](https://eduvit.github.io/roadcrashVIC/app/){.btn .btn-sm .about-link}
+:::
+
+<iframe class="app-frame" src="https://eduvit.github.io/roadcrashVIC/app/" title="roadcrashVIC app"></iframe>
