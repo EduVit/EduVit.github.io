@@ -46,7 +46,7 @@
     "href": "projects/roadcrashVIC/index.html#try-it",
     "title": "roadcrashVIC",
     "section": "Try it",
-    "text": "Try it\nThe package requires R 4.1.0 or later. Install it from GitHub and launch the app with:\n# install.packages(\"remotes\")\nremotes::install_github(\"ETC5523-2026/etc5523-assignment-4-eduvit\")\n\nlibrary(roadcrashVIC)\nrun_app()"
+    "text": "Try it\nThe package requires R 4.1.0 or later. Install it from GitHub and launch the app with:\n# install.packages(\"remotes\")\nremotes::install_github(\"EduVit/roadcrashVIC\")\n\nlibrary(roadcrashVIC)\nrun_app()"
   },
   {
     "objectID": "projects/roadcrashVIC/index.html#data-sources",
