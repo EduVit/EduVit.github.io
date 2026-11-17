@@ -3,19 +3,19 @@ title: "Eduardo Vitale"
 image: images/profile_photo.jpeg
 toc: false
 about:
-    template: trestles
-    image-shape: round
-    links:
-        - icon: github
-          text: GitHub
-          href: https://github.com/EduVit
-          target: _blank
-        - icon: envelope
-          text: Contact me!
-          href: mailto:eduardo.vitale@studio.unibo.it
-        - icon: envelope
-          text: Contact me!
-          href: mailto:evit0003@student.monash.edu
+  template: trestles
+  image-shape: round
+  links:
+    - icon: github
+      text: GitHub
+      href: https://github.com/EduVit
+      target: _blank
+    - icon: envelope
+      text: Contact me!
+      href: mailto:eduardo.vitale@studio.unibo.it
+    - icon: envelope
+      text: Contact me!
+      href: mailto:evit0003@student.monash.edu
 ---
 
 I'm a student of the Master's in Statistical Sciences at Università di Bologna (Italy 🇮🇹), currently on an exchange semester abroad at Monash University (Australia 🇦🇺).
