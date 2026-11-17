@@ -190,6 +190,10 @@ iframe.app-frame {display: block; width: 100%; height: 2200px; border: 1px solid
 /* references: medium gap between entries, as between paragraphs */
 #refs .csl-entry {margin-bottom: $space-m;}
 
+/* end of blog posts (Reuse): heading slightly bigger than the text, text the same size as the post */
+#quarto-appendix.default .quarto-appendix-heading {font-size: 1.25rem !important;}
+#quarto-appendix.default .quarto-appendix-contents > *:not(h2):not(.h2) {font-size: 1em;}
+
 /* ---------- CV ---------- */
 
 /* section titles: icon in navy, line underneath */
