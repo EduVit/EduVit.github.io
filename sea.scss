@@ -80,6 +80,11 @@ figcaption, .quarto-float-caption {
 .sidebar .quarto-alternate-formats > h2, .sidebar .quarto-other-links > h2 {font-size: $toc-font-size; font-weight: bold;}
 .sidebar .quarto-alternate-formats a, .sidebar .quarto-other-links a {font-size: $toc-font-size;}
 
+/* citation and cross-reference pop-ups: box with a navy border, arrow in the same colour as the box */
+.tippy-box[data-theme~=quarto] {background-color: $sky; border: 1px solid $navy; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);}
+.tippy-box[data-theme~=quarto][data-placement^=top] > .tippy-arrow::before {border-top-color: $sky;}
+.tippy-box[data-theme~=quarto][data-placement^=bottom] > .tippy-arrow::before {border-bottom-color: $sky;}
+
 /* ---------- Navbar ---------- */
 
 /* current page and hover colours */
