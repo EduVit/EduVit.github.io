@@ -10,11 +10,11 @@ language:
   title-block-published: "Released"
 other-links:
   - text: Source code
-    href: https://github.com/ETC5523-2026/etc5523-assignment-4-eduvit
+    href: https://github.com/EduVit/roadcrashVIC
     icon: github
     target: _blank
   - text: Documentation
-    href: https://etc5523-2026.github.io/etc5523-assignment-4-eduvit/
+    href: https://eduvit.github.io/roadcrashVIC
     icon: book
     target: _blank
 ---
@@ -43,7 +43,7 @@ The package requires R 4.1.0 or later. Install it from GitHub and launch the app
 
 ``` r
 # install.packages("remotes")
-remotes::install_github("ETC5523-2026/etc5523-assignment-4-eduvit")
+remotes::install_github("EduVit/roadcrashVIC")
 
 library(roadcrashVIC)
 run_app()
